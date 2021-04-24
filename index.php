@@ -12,8 +12,6 @@ foreach ($directories as $directory) {
 		array_push($projectsList, $directory);
 	}
 }
-var_dump($arr);
-
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +24,7 @@ var_dump($arr);
 
 	<title>Document</title>
 
-	<link rel="./.__localDashboard__/assets/css/index.css" />
+	<link rel="stylesheet" href="./.__localDashboard__/assets/css/index.css">
 </head>
 
 <body>
