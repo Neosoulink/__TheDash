@@ -26,7 +26,7 @@ var_dump($arr);
 
 	<title>Document</title>
 
-	<link rel="" />
+	<link rel="./.__localDashboard__/assets/css/index.css" />
 </head>
 
 <body>
