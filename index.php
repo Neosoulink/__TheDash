@@ -39,11 +39,11 @@ foreach ($directories as $directory) {
 			<h1 class="body-title">My local projects (<?= count($projectsList) ?>)</h1>
 
 			<section class="project-list fill">
-				<?php foreach ($projectsList as $project) { ?>
+				<?php foreach ($projectsList as $projectName) { ?>
 					<div class="project-item space-between-centered">
 						<div>
-							<h2 class="project-name"><?= $project ?></h2>
-							<a href="/<?= $project ?>">Open project</a>
+							<h2 class="project-name"><?= $projectName ?></h2>
+							<a href="http://<?= $projectName ?>.dev" target="blank_">Open project</a>
 						</div>
 						<diV>
 							<button>fav</button>
@@ -63,6 +63,20 @@ foreach ($directories as $directory) {
 			<div> Php v7.4.3</div>
 		</footer>
 	</div>
+	<!--<?= print_r(get_defined_constants()) ?>-->
+	<!--<?= phpinfo()  ?>-->
+	<pre><?php
+				$phpInfoShell = shell_exec('php -i');
+				$arrayLinePhpInfo = array_filter(preg_split("/\n/", $phpInfoShell));
+				$formattedArrayLines = array();
+
+				foreach ($arrayLinePhpInfo as $lineValue) {
+					$splittedLineValue = preg_split("/=>/", $lineValue);
+					if (count($splittedLineValue) === 2)
+						$formattedArrayLines[str_replace(" ", "", $splittedLineValue[0])] = $splittedLineValue[1];
+				}
+				echo $formattedArrayLines["LoadedConfigurationFile"];
+				?></pre>
 
 </body>
 
