@@ -75,7 +75,7 @@ foreach ($directories as $directory) {
 					if (count($splittedLineValue) === 2)
 						$formattedArrayLines[str_replace(" ", "", $splittedLineValue[0])] = $splittedLineValue[1];
 				}
-				echo $formattedArrayLines["LoadedConfigurationFile"];
+				var_dump($formattedArrayLines);
 				?></pre>
 
 </body>
