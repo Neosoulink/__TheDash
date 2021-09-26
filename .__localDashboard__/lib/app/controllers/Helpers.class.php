@@ -6,9 +6,41 @@
 class Helpers
 {
 	/**
+	 * This function does a great job at converting phpinfo into an array.
+	 *
 	 * @return array
 	 */
-	public static function getProjectList()
+
+function get_parsed_phpinfo() {
+    ob_start(); phpinfo(INFO_MODULES); $s = ob_get_contents(); ob_end_clean();
+    $s = strip_tags($s, '<h2><th><td>');
+    $s = preg_replace('/<th[^>]*>([^<]+)<\/th>/', '<info>\1</info>', $s);
+    $s = preg_replace('/<td[^>]*>([^<]+)<\/td>/', '<info>\1</info>', $s);
+    $t = preg_split('/(<h2[^>]*>[^<]+<\/h2>)/', $s, -1, PREG_SPLIT_DELIM_CAPTURE);
+    $r = array(); $count = count($t);
+    $p1 = '<info>([^<]+)<\/info>';
+    $p2 = '/'.$p1.'\s*'.$p1.'\s*'.$p1.'/';
+    $p3 = '/'.$p1.'\s*'.$p1.'/';
+    for ($i = 1; $i < $count; $i++) {
+        if (preg_match('/<h2[^>]*>([^<]+)<\/h2>/', $t[$i], $matchs)) {
+            $name = trim($matchs[1]);
+            $vals = explode("\n", $t[$i + 1]);
+            foreach ($vals AS $val) {
+                if (preg_match($p2, $val, $matchs)) { // 3cols
+                    $r[$name][trim($matchs[1])] = array(trim($matchs[2]), trim($matchs[3]));
+                } elseif (preg_match($p3, $val, $matchs)) { // 2cols
+                    $r[$name][trim($matchs[1])] = trim($matchs[2]);
+                }
+            }
+        }
+    }
+    return $r;
+}
+
+	/**
+	 * @return array
+	 */
+	public static function get_project_list()
 	{
 		$dir = './';
 		$directories = scandir($dir);
@@ -30,7 +62,7 @@ class Helpers
 	/**
 	 * @return array
 	 */
-	public static function getShellPhpInfo()
+	public static function get_shell_phpinfo()
 	{
 		$phpInfoShell = shell_exec('php -i');
 		$arrayLinePhpInfo = array_filter(preg_split("/\n/", $phpInfoShell));
@@ -48,7 +80,7 @@ class Helpers
 	/**
 	 *
 	 */
-	public static function generateUniqId($length = 13)
+	public static function generate_uniq_id($length = 13)
 	{
 		// uniqid gives 13 chars, but you could adjust it to your needs.
 		if (function_exists("random_bytes")) {
@@ -66,7 +98,7 @@ class Helpers
 	 *
 	 * @return string
 	 */
-	public static function getUserIpAddr()
+	public static function get_user_ip_addr()
 	{
 		if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 			//ip from share internet
@@ -83,7 +115,7 @@ class Helpers
 	/**
 	 *
 	 */
-	public static function getHttpUserAgent()
+	public static function get_http_user_agent()
 	{
 		return (!empty($_SERVER['HTTP_USER_AGENT'])) ? $_SERVER['HTTP_USER_AGENT'] : '';
 	}
@@ -91,7 +123,7 @@ class Helpers
 	/**
 	 *
 	 */
-	public static function detectBrowser(String $data)
+	public static function detect_browser(String $data)
 	{
 		$user_agent = (!empty($data)) ? $data : App::getHttpUserAgent();
 		$browser  = "Inconnu";
@@ -117,7 +149,7 @@ class Helpers
 	/**
 	 *
 	 */
-	public static function detectOS(String $data)
+	public static function detect_os(String $data)
 	{
 		$user_agent = (!empty($data)) ? $data : App::getHttpUserAgent();
 		$os_platform = "Inconnu";
