@@ -20,10 +20,10 @@
 			</div>
 		</header>
 		<main class="body fill">
-			<h1 class="body-title">My local projects (<?= count(Helpers::getProjectList()) ?>)</h1>
+			<h1 class="body-title">My local projects (<?= count(Helpers::get_project_list()) ?>)</h1>
 
 			<section class="project-list fill">
-				<?php foreach (Helpers::getProjectList() as $projectName) { ?>
+				<?php foreach (Helpers::get_project_list() as $projectName) { ?>
 					<div class="project-item space-between-centered">
 						<div>
 							<h2 class="project-name"><?= $projectName ?></h2>
@@ -36,7 +36,7 @@
 				<?php } ?>
 
 			</section>
-			<?php if (!count(Helpers::getProjectList())) { ?>
+			<?php if (!count(Helpers::get_project_list())) { ?>
 				<div class="empty-list centered">
 					List empty
 				</div>
@@ -48,8 +48,8 @@
 		</footer>
 	</div>
 	<!--<?= phpinfo() ?>-->
-	<!--<pre><?= print_r(Helpers::getShellPhpInfo()) ?></pre>-->
-
+	<!--<pre><?= print_r(Helpers::get_shell_phpinfo()) ?></pre>-->
+	<!--<pre><?= print_r(Helpers::get_parsed_phpinfo()) ?></pre>-->
 
 </body>
 
