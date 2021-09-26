@@ -14,13 +14,10 @@ class Autoloader
 	static function autoload($class_name)
 	{
 		$path = __DIR__ . '/' . $class_name . '.class.php';
-		if (preg_match('/models(.)+\.class\.php/', $path) && file_exists($path)) {
-			require $path;
+		if (preg_match('/(controller|models)(.)+\.class\.php/', $path) && file_exists($path)) {
+			return require $path;
 		} else {
 			header('HTTP/1.1 400 Class doesn\'t exist');
-			//exit();
 		}
-		echo $path . '<br />';
-		require $path;
 	}
 }

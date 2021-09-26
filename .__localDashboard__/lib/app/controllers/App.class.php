@@ -10,6 +10,7 @@ class App
 	 */
 	static function launchApp()
 	{
-		require("../views/components/Layout.php");
+		// IMPORTANT: Add a path resolver
+		require ".__localDashboard__/lib/app/views/components/Layout.php";
 	}
 }
