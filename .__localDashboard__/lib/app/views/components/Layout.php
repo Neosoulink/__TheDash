@@ -47,8 +47,9 @@
 			<div> Php v7.4.3</div>
 		</footer>
 	</div>
-	<!--<?= print_r(get_defined_constants()) ?>-->
-	<!--<?= phpinfo()  ?>-->
+	<!--<?= phpinfo() ?>-->
+	<!--<pre><?= print_r(Helpers::getShellPhpInfo()) ?></pre>-->
+
 
 </body>
 
