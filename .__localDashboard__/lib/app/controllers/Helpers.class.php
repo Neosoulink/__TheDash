@@ -3,9 +3,51 @@
 /**
  * Helper Class. That class provide many utils methods.
  */
-class Helper
+class Helpers
 {
+	/**
+	 * @return array
+	 */
+	public static function getProjectList()
+	{
+		$dir = './';
+		$directories = scandir($dir);
+		$doNotShow = [
+			'index.php',
+		];
 
+		$projectsList = [];
+
+		foreach ($directories as $directory) {
+			if (!in_array($directory, $doNotShow) && !preg_match('/^[\.].*$/', $directory)) {
+				array_push($projectsList, $directory);
+			}
+		}
+
+		return $projectsList;
+	}
+
+	/**
+	 * @return array
+	 */
+	public static function getShellPhpInfo()
+	{
+		$phpInfoShell = shell_exec('php -i');
+		$arrayLinePhpInfo = array_filter(preg_split("/\n/", $phpInfoShell));
+		$formattedArrayLines = array();
+
+		foreach ($arrayLinePhpInfo as $lineValue) {
+			$splittedLineValue = preg_split("/=>/", $lineValue);
+			if (count($splittedLineValue) === 2)
+				$formattedArrayLines[str_replace(" ", "", $splittedLineValue[0])] = $splittedLineValue[1];
+		}
+
+		return $formattedArrayLines;
+	}
+
+	/**
+	 *
+	 */
 	public static function generateUniqId($length = 13)
 	{
 		// uniqid gives 13 chars, but you could adjust it to your needs.
@@ -38,11 +80,17 @@ class Helper
 		return $ip;
 	}
 
+	/**
+	 *
+	 */
 	public static function getHttpUserAgent()
 	{
 		return (!empty($_SERVER['HTTP_USER_AGENT'])) ? $_SERVER['HTTP_USER_AGENT'] : '';
 	}
 
+	/**
+	 *
+	 */
 	public static function detectBrowser(String $data)
 	{
 		$user_agent = (!empty($data)) ? $data : App::getHttpUserAgent();
@@ -66,6 +114,9 @@ class Helper
 		return $browser;
 	}
 
+	/**
+	 *
+	 */
 	public static function detectOS(String $data)
 	{
 		$user_agent = (!empty($data)) ? $data : App::getHttpUserAgent();

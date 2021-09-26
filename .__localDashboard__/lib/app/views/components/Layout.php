@@ -1,19 +1,3 @@
-<?php
-$dir = './';
-$directories = scandir($dir);
-$doNotShow = [
-	'index.php',
-];
-
-$projectsList = [];
-
-foreach ($directories as $directory) {
-	if (!in_array($directory, $doNotShow) && !preg_match('/^[\.].*$/', $directory)) {
-		array_push($projectsList, $directory);
-	}
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,10 +20,10 @@ foreach ($directories as $directory) {
 			</div>
 		</header>
 		<main class="body fill">
-			<h1 class="body-title">My local projects (<?= count($projectsList) ?>)</h1>
+			<h1 class="body-title">My local projects (<?= count(Helpers::getProjectList()) ?>)</h1>
 
 			<section class="project-list fill">
-				<?php foreach ($projectsList as $projectName) { ?>
+				<?php foreach (Helpers::getProjectList() as $projectName) { ?>
 					<div class="project-item space-between-centered">
 						<div>
 							<h2 class="project-name"><?= $projectName ?></h2>
@@ -52,7 +36,7 @@ foreach ($directories as $directory) {
 				<?php } ?>
 
 			</section>
-			<?php if (!count($projectsList)) { ?>
+			<?php if (!count(Helpers::getProjectList())) { ?>
 				<div class="empty-list centered">
 					List empty
 				</div>
@@ -65,18 +49,6 @@ foreach ($directories as $directory) {
 	</div>
 	<!--<?= print_r(get_defined_constants()) ?>-->
 	<!--<?= phpinfo()  ?>-->
-	<pre><?php
-				$phpInfoShell = shell_exec('php -i');
-				$arrayLinePhpInfo = array_filter(preg_split("/\n/", $phpInfoShell));
-				$formattedArrayLines = array();
-
-				foreach ($arrayLinePhpInfo as $lineValue) {
-					$splittedLineValue = preg_split("/=>/", $lineValue);
-					if (count($splittedLineValue) === 2)
-						$formattedArrayLines[str_replace(" ", "", $splittedLineValue[0])] = $splittedLineValue[1];
-				}
-				var_dump($formattedArrayLines);
-				?></pre>
 
 </body>
 
