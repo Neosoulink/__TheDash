@@ -14,7 +14,7 @@ class Autoloader
 	static function autoload($class_name)
 	{
 		$path = __DIR__ . '/' . $class_name . '.class.php';
-		if (preg_match('/models/(.)+\.php/', $path) && file_exists($path)) {
+		if (preg_match('/models\/(.)+\.php/', $path) && file_exists($path)) {
 			//$path = () ? $path : str_replace('.class', '', $path);
 			require $path;
 		} else {
