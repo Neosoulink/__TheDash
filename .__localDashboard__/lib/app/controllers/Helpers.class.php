@@ -64,12 +64,12 @@ class Helpers
 	/**
 	 * @return array
 	 */
-	public static function generateProjectUrl(string $projectName) : string
+	public static function generate_project_url(string $projectName) : string
 	{
 		$protocole = 'http://';
-		$hostname = $_SERVER["HTTP_HOST"];
+		$hostname = $_SERVER["HTTP_HOST"].'/';
 
-		return $protocole+$hostname+$projectName;
+		return $protocole.$hostname.$projectName;
 	}
 
 	/**
