@@ -64,6 +64,17 @@ class Helpers
 	/**
 	 * @return array
 	 */
+	public static function generateProjectUrl(string $projectName) : string
+	{
+		$protocole = 'http://';
+		$hostname = $_SERVER["HTTP_HOST"];
+
+		return $protocole+$hostname+$projectName;
+	}
+
+	/**
+	 * @return array
+	 */
 	public static function get_shell_phpinfo()
 	{
 		$phpInfoShell = shell_exec('php -i');
