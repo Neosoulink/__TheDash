@@ -8,7 +8,7 @@
 
 	<title>Document</title>
 
-	<link rel="stylesheet" href="./.__localDashboard__/assets/css/index.css">
+	<link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
