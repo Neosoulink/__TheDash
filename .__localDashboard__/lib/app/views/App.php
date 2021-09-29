@@ -23,7 +23,11 @@
 			<h1 class="body-title">My local projects (<?= count(Helpers::get_project_list()) ?>)</h1>
 
 			<section class="project-list fill">
-				<?php foreach (Helpers::get_project_list() as $projectName) { ?>
+				<?php
+				$projectList = Helpers::get_project_list();
+				if (!count($projectList)) {
+					 foreach ($projectList as $projectName) {
+				?>
 					<div class="project-item space-between-centered">
 						<div>
 							<h2 class="project-name"><?= $projectName ?></h2>
@@ -33,10 +37,8 @@
 							<button>fav</button>
 						</diV>
 					</div>
-				<?php } ?>
-
-			</section>
-			<?php if (!count(Helpers::get_project_list())) { ?>
+				</section>
+				<?php }} else { ?>
 				<div class="empty-list centered">
 					List empty
 				</div>
