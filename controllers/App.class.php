@@ -10,7 +10,7 @@ class App
 	 */
 	static function launchApp()
 	{
-		// IMPORTANT: Add a path resolver
-		require ".__localDashboard__/lib/app/views/App.php";
+		$path = __DIR__ . '/../views/'  . 'App.php';
+		require $path;
 	}
 }
