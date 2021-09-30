@@ -3,7 +3,7 @@
 /**
  * Class that provide some useful method to manage projects
  */
-class ProjectManager
+class ProjectsManager
 {
 
 	/**

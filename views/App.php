@@ -20,10 +20,10 @@
 			</div>
 		</header>
 		<main class="body fill">
-			<h1 class="body-title">My local projects (<?= count(ProjectManager::get_project_list()) ?>)</h1>
+			<h1 class="body-title">My local projects (<?= count(ProjectsManager::get_project_list()) ?>)</h1>
 
 			<?php
-			$projectList = ProjectManager::get_project_list();
+			$projectList = ProjectsManager::get_project_list();
 			if (count($projectList)) {
 			?>
 				<section class="project-list fill">
@@ -33,7 +33,7 @@
 						<div class="project-item space-between-centered">
 							<div>
 								<h2 class="project-name"><?= $projectName ?></h2>
-								<a href="<?= ProjectManager::generate_project_url($projectName) ?>" target="blank_">Open project</a>
+								<a href="<?= ProjectsManager::generate_project_url($projectName) ?>" target="blank_">Open project</a>
 							</div>
 							<diV>
 								<button>fav</button>
