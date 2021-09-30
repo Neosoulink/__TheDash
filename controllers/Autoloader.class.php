@@ -1,5 +1,7 @@
 <?php
 
+namespace Controllers;
+
 /**
  * App autoloader.
  *
