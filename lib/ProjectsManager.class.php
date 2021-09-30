@@ -9,13 +9,14 @@ class ProjectsManager
 	/**
 	 * @return array
 	 */
-	public static function get_project_list() : array
+	public static function get_project_list(): array
 	{
+		$appName = getenv('APP_NAME');
 		$dir = './';
 		$directories = scandir($dir);
 		$doNotShow = [
 			'index.php',
-			'__TheDash',
+			$appName,
 		];
 
 		$projectsList = [];
