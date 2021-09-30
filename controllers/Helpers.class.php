@@ -10,8 +10,7 @@ class Helpers
 	 *
 	 * @return array
 	 */
-
-	public static function get_parsed_phpinfo()
+	public static function get_parsed_phpinfo() : array
 	{
 		ob_start(); phpinfo(INFO_MODULES); $s = ob_get_contents(); ob_end_clean();
 		$s = strip_tags($s, '<h2><th><td>');
@@ -163,4 +162,5 @@ class Helpers
 				$os_platform = $value;
 		return $os_platform;
 	}
+
 }
