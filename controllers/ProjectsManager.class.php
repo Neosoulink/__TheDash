@@ -15,6 +15,7 @@ class ProjectsManager
 		$directories = scandir($dir);
 		$doNotShow = [
 			'index.php',
+			'__TheDash',
 		];
 
 		$projectsList = [];

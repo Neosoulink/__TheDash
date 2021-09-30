@@ -171,8 +171,7 @@ class Helpers
 	 */
 	public static function getAssetsPath(): string
 	{
-		$rootDirectory = __DIR__;
-		$assetsRelative = "/assets";
-		return $rootDirectory . $assetsRelative;
+		$appName = "__TheDash";
+		return "$appName/assets";
 	}
 }
