@@ -6,9 +6,11 @@ class App
 	}
 
 	/**
-	 * Launch app
+	 * Launch view app
+	 *
+	 * @return void
 	 */
-	static function launchApp()
+	static function launchApp(): void
 	{
 		$path = __DIR__ . '/../views/'  . 'App.php';
 		require $path;
