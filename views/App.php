@@ -8,7 +8,7 @@
 
 	<title>__TheDash</title>
 
-	<link rel="stylesheet" href="./assets/css/index.css">
+	<link rel="stylesheet" href="<?= Helpers::getAssetsPath() ?>/css/index.css">
 </head>
 
 <body>
@@ -20,25 +20,25 @@
 			</div>
 		</header>
 		<main class="body fill">
-			<h1 class="body-title">My local projects (<?= count(Helpers::get_project_list()) ?>)</h1>
+			<h1 class="body-title">My local projects (<?= count(ProjectManager::get_project_list()) ?>)</h1>
 
 			<?php
-				$projectList = Helpers::get_project_list();
-				if (count($projectList)) {
+			$projectList = ProjectManager::get_project_list();
+			if (count($projectList)) {
 			?>
 				<section class="project-list fill">
-				<?php
+					<?php
 					foreach ($projectList as $projectName) {
-				?>
-					<div class="project-item space-between-centered">
-						<div>
-							<h2 class="project-name"><?= $projectName ?></h2>
-							<a href="<?= Helpers::generate_project_url($projectName) ?>" target="blank_">Open project</a>
+					?>
+						<div class="project-item space-between-centered">
+							<div>
+								<h2 class="project-name"><?= $projectName ?></h2>
+								<a href="<?= ProjectManager::generate_project_url($projectName) ?>" target="blank_">Open project</a>
+							</div>
+							<diV>
+								<button>fav</button>
+							</diV>
 						</div>
-						<diV>
-							<button>fav</button>
-						</diV>
-					</div>
 					<?php } ?>
 				</section>
 			<?php } else { ?>
