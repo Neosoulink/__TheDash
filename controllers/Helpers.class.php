@@ -171,7 +171,7 @@ class Helpers
 	 */
 	public static function getAssetsPath(): string
 	{
-		$appName = "__TheDash";
+		$appName = getenv('APP_NAME');
 		return "$appName/assets";
 	}
 }
