@@ -12,6 +12,8 @@ use Controllers\Autoloader;
 Autoloader::register();
 SessionManager::ss();
 
+(new DotEnv(__DIR__ . '/.env'))->load();
+
 // IMPORTANT: DEFINE A ROOTER !!!
 App::launchApp();
 //
