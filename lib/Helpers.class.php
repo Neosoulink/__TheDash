@@ -174,4 +174,13 @@ class Helpers
 		$appName = getenv('APP_NAME');
 		return "$appName/assets";
 	}
+
+	/**
+	 * Method that return the relative root path
+	 */
+	public static function getRelativeRootPath(): string
+	{
+		$appName = getenv('APP_NAME');
+		return "$appName";
+	}
 }
