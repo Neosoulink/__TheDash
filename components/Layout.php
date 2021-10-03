@@ -1,5 +1,5 @@
 <?php
-function layout(string $children = ""): string
+function layout(string $children = ""): void
 {
 	$layout = '<!DOCTYPE html>
 		<html lang="en">
@@ -21,5 +21,5 @@ function layout(string $children = ""): string
 		</html>
 	';
 
-	return $layout;
+	echo $layout;
 }
