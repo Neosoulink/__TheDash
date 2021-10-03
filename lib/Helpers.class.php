@@ -168,6 +168,8 @@ class Helpers
 
 	/**
 	 * Method that return assets path
+	 *
+	 * @return string
 	 */
 	public static function getAssetsPath(): string
 	{
@@ -177,6 +179,8 @@ class Helpers
 
 	/**
 	 * Method that return the relative root path
+	 *
+	 * @return string
 	 */
 	public static function getRelativeRootPath(): string
 	{
