@@ -1,6 +1,3 @@
-	<?php require("../components/Layout.php") ?>
-
-	<?php layout('ds') ?>
 	<div class="screen d-flex flex-column">
 		<header class="nav space-between-centered">
 			<h1 class="app-name">myProjects</h1>
@@ -41,4 +38,3 @@
 			<div> Php v7.4.3</div>
 		</footer>
 	</div>
-	<?php ; ?>

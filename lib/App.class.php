@@ -12,7 +12,7 @@ class App
 	 */
 	static function launchApp(): void
 	{
-		$path = __DIR__ . '/../views/'  . 'App.php';
+		$path = __DIR__ . '/../'  . 'App.php';
 		require $path;
 	}
 }

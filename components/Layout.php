@@ -1,7 +1,7 @@
 <?php
 function layout(string $children = ""): string
 {
-	$layout = `<!DOCTYPE html>
+	$layout = '<!DOCTYPE html>
 		<html lang="en">
 
 		<head>
@@ -11,15 +11,15 @@ function layout(string $children = ""): string
 
 			<title>__TheDash</title>
 
-			<link rel="stylesheet" href="` . Helpers::getAssetsPath() . `/css/index.css">
+			<link rel="stylesheet" href="' . Helpers::getAssetsPath() . '/css/index.css">
 		</head>
 
 		<body>
-		` . $children . `
+		' . $children . '
 		</body>
 
 		</html>
-	`;
+	';
 
 	return $layout;
 }
