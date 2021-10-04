@@ -187,4 +187,30 @@ class Helpers
 		$appName = getenv('APP_NAME');
 		return "$appName";
 	}
+
+	/**
+	 * Method that return the directory infos
+	 *
+	 * @return array
+	 */
+	public static function get_dir_info(string $dir): array
+	{
+		$dir_infos = [];
+
+		if (file_exists($dir)) {
+			$dir_infos["size"] = filesize($dir);
+			$dir_infos["type"] = filetype($dir);
+			$dir_infos["last_access_time"] = fileatime($dir);
+			$dir_infos["inode_change_time"] = filectime($dir);
+			$dir_infos["group"] = filegroup($dir);
+			$dir_infos["modification_time"] = filemtime($dir);
+			$dir_infos["owner"] = fileowner($dir);
+			$dir_infos["permissions"] = fileperms($dir);
+			$dir_infos["permissions"] = file_exists($dir);
+		} else {
+			throw new Exception("The directory passed aren't valid", 1);
+		}
+
+		return $dir_infos;
+	}
 }
