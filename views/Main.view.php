@@ -1,3 +1,6 @@
+	<?php
+	$projectList = ProjectsManager::get_project_list();
+	?>
 	<div class="screen d-flex flex-column">
 		<header class="nav space-between-centered">
 			<h1 class="app-name">myProjects</h1>
@@ -6,16 +9,14 @@
 			</div>
 		</header>
 		<main class="body fill">
-			<h1 class="body-title">My local projects (<?= count(ProjectsManager::get_project_list()) ?>)</h1>
+			<h1 class="body-title">My local projects (<?= count($projectList) ?>)</h1>
 
 			<?php
-			$projectList = ProjectsManager::get_project_list();
-			if (count($projectList)) {
+
+			if (count($projectList)) :
 			?>
 				<section class="project-list fill">
-					<?php
-					foreach ($projectList as $projectName) {
-					?>
+					<?php foreach ($projectList as $projectName) : ?>
 						<div class="project-item space-between-centered">
 							<div>
 								<h2 class="project-name"><?= $projectName ?></h2>
@@ -25,13 +26,13 @@
 								<button>fav</button>
 							</diV>
 						</div>
-					<?php } ?>
+					<?php endforeach; ?>
 				</section>
-			<?php } else { ?>
+			<?php else : ?>
 				<div class="empty-list centered">
 					List empty
 				</div>
-			<?php } ?>
+			<?php endif ?>
 		</main>
 		<footer class="space-between-centered">
 			<div class="copyright">myProjects@<span id="currentYear">2021</span> | Github</div>
