@@ -22,7 +22,7 @@ class ProjectsManager
 		$projectsList = [];
 
 		foreach ($directories as $directory) {
-			if (!in_array($directory, $doNotShow) && !preg_match('/^[\.].*$/', $directory)) {
+			if (!in_array($directory, $doNotShow) && !preg_match('/^[\.]{1,2}/', $directory)) {
 				array_push($projectsList, $directory);
 			}
 		}
