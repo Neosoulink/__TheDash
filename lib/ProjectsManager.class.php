@@ -15,14 +15,17 @@ class ProjectsManager
 		$dir = './';
 		$directories = scandir($dir);
 		$doNotShow = [
-			'index.php',
 			$appName,
 		];
 
 		$projectsList = [];
 
 		foreach ($directories as $directory) {
-			if (!in_array($directory, $doNotShow) && !preg_match('/^[\.]{1,2}/', $directory)) {
+			if (
+				!in_array($directory, $doNotShow) &&
+				!preg_match('/^[\.]{1,2}/', $directory) &&
+				is_dir($dir . $directory)
+			) {
 				array_push($projectsList, $directory);
 			}
 		}
