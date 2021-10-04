@@ -11,15 +11,12 @@
 		<main class="body fill">
 			<h1 class="body-title">My local projects (<?= count($projectList) ?>)</h1>
 
-			<?php
-
-			if (count($projectList)) :
-			?>
+			<?php if (count($projectList)) : ?>
 				<section class="project-list fill">
 					<?php foreach ($projectList as $projectName) : ?>
 						<div class="project-item space-between-centered">
 							<div>
-								<h2 class="project-name"><?= $projectName ?></h2>
+								<h2 class="project-name"><?= $projectName ?> / <?= ProjectsManager::get_project_builded_lang($projectName) ?></h2>
 								<a href="<?= ProjectsManager::generate_project_url($projectName) ?>" target="blank_">Open project</a>
 							</div>
 							<diV>
