@@ -1,4 +1,5 @@
 const JsonProjectList = window.document.getElementById("JsonProjectList").value;
+window.document.getElementById("JsonProjectList").remove();
 
 const RootComponent = {
 	data() {
