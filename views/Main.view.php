@@ -2,7 +2,7 @@
 $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 ?>
 
-<input id="JsonProjectList" type="hidden" value="<?= $JsonProjectList ?>">
+<input id="JsonProjectList" type="hidden" value='<?= $JsonProjectList ?>'>
 
 <div id="app">
 	<header class="nav space-between-centered">
