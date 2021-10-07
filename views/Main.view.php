@@ -13,11 +13,11 @@
 
 			<?php if (count($projectList)) : ?>
 				<section class="project-list fill">
-					<?php foreach ($projectList as $projectName) : ?>
+					<?php foreach ($projectList as $projectData) : ?>
 						<div class="project-item space-between-centered">
 							<div>
-								<h2 class="project-name"><?= $projectName ?> / <?= ProjectsManager::get_project_builded_lang($projectName) ?></h2>
-								<a href="<?= ProjectsManager::generate_project_url($projectName) ?>" target="blank_">Open project</a>
+								<h2 class="project-name"><?= $projectData["project_name"] ?> / <?= ProjectsManager::get_project_builded_lang($projectData["project_name"]) ?></h2>
+								<a href="<?= ProjectsManager::generate_project_url($projectData["project_name"]) ?>" target="blank_">Open project</a>
 							</div>
 							<diV>
 								<button>fav</button>
