@@ -26,7 +26,10 @@ class ProjectsManager
 				!preg_match('/^[\.]{1,2}/', $directory) &&
 				is_dir($dir . $directory)
 			) {
-				array_push($projectsList, $directory);
+				$dirInfo = Helpers::get_dir_info($dir . $directory);
+				$dirInfo["project_name"] = $directory;
+
+				array_push($projectsList, $dirInfo);
 			}
 		}
 
@@ -76,6 +79,8 @@ class ProjectsManager
 			(in_array($projects_builded->LARAVEL[0], $projects_list, true) ||
 				in_array($projects_builded->LARAVEL[0], $projects_list, true))
 		) {
+			var_dump(Helpers::get_dir_info($dir . '/' . $directory));
+			die();
 			$project_builded_name = $projects_builded_names->LARAVEL;
 		}
 
