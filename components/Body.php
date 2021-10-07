@@ -3,7 +3,7 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 ?>
 
 <input id="JsonProjectList" type="hidden" value="<?= $JsonProjectList ?>">
-<div id="root"></div>
+<div id="app"></div>
 
 <!--<div class="screen d-flex flex-column">
 	<header class="nav space-between-centered">
@@ -46,4 +46,4 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 </div>-->
 
 <script src="<?= Helpers::getAssetsPath() ?>/packages/vue/Vue3.js"></script>
-<script src="<?= Helpers::getRelativeRootPath() ?>/scr/index.js"></script>
+<script type="module" src="<?= Helpers::getRelativeRootPath() ?>/src/index.js"></script>
