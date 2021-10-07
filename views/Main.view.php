@@ -14,29 +14,24 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 	<main class="body fill">
 		<h1 class="body-title">My local projects {{ projectList?.length }}</h1>
 
-		<?php if (count($projectList)) : ?>
-			<section class="project-list fill">
-				<?php foreach ($projectList as $projectData) : ?>
-					<div class="project-item space-between-centered">
-						<div>
-							<h2 class="project-name">
-								<?= $projectData["name"] ?> /
-								<?= $projectData["builded_lang"] ?> /
-								Size : <?= $projectData["size"] ?>kb
-							</h2>
-							<a href="<?= ProjectsManager::generate_project_url($projectData["name"]) ?>" target="blank_">Open project</a>
-						</div>
-						<diV>
-							<button>fav</button>
-						</diV>
-					</div>
-				<?php endforeach; ?>
-			</section>
-		<?php else : ?>
-			<div class="empty-list centered">
-				List empty
+		<section v-if="projectList?.length" class="project-list fill">
+			<div v-for="(projectData, index) in projectList" :key="index" class="project-item space-between-centered">
+				<div>
+					<h2 class="project-name">
+						{{ projectData?.name }} /
+						{{ projectData?.builded_lang }} /
+						Size : {{ projectData?.size }}kb
+					</h2>
+					<!--<a href="<?= ProjectsManager::generate_project_url($projectData["name"]) ?>" target="blank_">Open project</a>-->
+				</div>
+				<diV>
+					<button>fav</button>
+				</diV>
 			</div>
-		<?php endif ?>
+		</section>
+		<div v-else class="empty-list centered">
+			List empty
+		</div>
 	</main>
 	<footer class="space-between-centered">
 		<div class="copyright">myProjects@<span id="currentYear">2021</span> | Github</div>
