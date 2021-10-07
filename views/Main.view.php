@@ -3,9 +3,8 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 ?>
 
 <input id="JsonProjectList" type="hidden" value="<?= $JsonProjectList ?>">
-<div id="app"></div>
 
-<!--<div class="screen d-flex flex-column">
+<div id="app">
 	<header class="nav space-between-centered">
 		<h1 class="app-name">myProjects</h1>
 		<div class="">
@@ -13,7 +12,7 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 		</div>
 	</header>
 	<main class="body fill">
-		<h1 class="body-title">My local projects (<?= count($projectList) ?>)</h1>
+		<h1 class="body-title">My local projects {{ projectList?.length }}</h1>
 
 		<?php if (count($projectList)) : ?>
 			<section class="project-list fill">
@@ -43,7 +42,7 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 		<div class="copyright">myProjects@<span id="currentYear">2021</span> | Github</div>
 		<div> Php v7.4.3</div>
 	</footer>
-</div>-->
+</div>
 
-<script src="<?= Helpers::getAssetsPath() ?>/packages/vue/Vue3.js"></script>
-<script type="module" src="<?= Helpers::getRelativeRootPath() ?>/src/index.js"></script>
+<script src="<?= Helpers::getAssetsPath() ?>/js/Vue3.js"></script>
+<script type="module" src="<?= Helpers::getAssetsPath() ?>/js/App.js"></script>
