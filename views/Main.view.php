@@ -16,8 +16,12 @@
 					<?php foreach ($projectList as $projectData) : ?>
 						<div class="project-item space-between-centered">
 							<div>
-								<h2 class="project-name"><?= $projectData["project_name"] ?> / <?= ProjectsManager::get_project_builded_lang($projectData["project_name"]) ?></h2>
-								<a href="<?= ProjectsManager::generate_project_url($projectData["project_name"]) ?>" target="blank_">Open project</a>
+								<h2 class="project-name">
+									<?= $projectData["name"] ?> /
+									<?= $projectData["builded_lang"] ?> /
+									Size : <?= $projectData["size"] ?>kb
+								</h2>
+								<a href="<?= ProjectsManager::generate_project_url($projectData["name"]) ?>" target="blank_">Open project</a>
 							</div>
 							<diV>
 								<button>fav</button>

@@ -27,7 +27,7 @@ class ProjectsManager
 				is_dir($dir . $directory)
 			) {
 				$project_data = Helpers::get_dir_info($dir . $directory);
-				$project_data["project_name"] = $directory;
+				$project_data["name"] = $directory;
 				$project_data["builded_lang"] = self::get_project_builded_lang($dir . $directory);
 
 				array_push($projectsList, $project_data);

@@ -206,7 +206,7 @@ class Helpers
 			$dir_infos["modification_time"] = filemtime($dir);
 			$dir_infos["owner"] = fileowner($dir);
 			$dir_infos["permissions"] = fileperms($dir);
-			$dir_infos["permissions"] = file_exists($dir);
+			$dir_infos["file_exists"] = file_exists($dir);
 		} else {
 			throw new Exception("The directory passed aren't valid", 1);
 		}
