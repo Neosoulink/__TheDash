@@ -1,8 +1,11 @@
 <?php
-$projectList = ProjectsManager::get_project_list();
-$projectListJSON = json_encode($projectList);
+$JsonProjectList = json_encode(ProjectsManager::get_project_list());
 ?>
-<div class="screen d-flex flex-column">
+
+<input id="JsonProjectList" type="hidden" value="<?= $JsonProjectList ?>">
+<div id="root"></div>
+
+<!--<div class="screen d-flex flex-column">
 	<header class="nav space-between-centered">
 		<h1 class="app-name">myProjects</h1>
 		<div class="">
@@ -40,4 +43,7 @@ $projectListJSON = json_encode($projectList);
 		<div class="copyright">myProjects@<span id="currentYear">2021</span> | Github</div>
 		<div> Php v7.4.3</div>
 	</footer>
-</div>
+</div>-->
+
+<script src="<?= Helpers::getAssetsPath() ?>/packages/vue/Vue3.js"></script>
+<script src="<?= Helpers::getRelativeRootPath() ?>/scr/index.js"></script>
