@@ -20,9 +20,9 @@ $JsonProjectList = json_encode(ProjectsManager::get_project_list());
 					<h2 class="project-name">
 						{{ projectData?.name }} /
 						{{ projectData?.builded_lang }} /
-						Size : {{ projectData?.size }}kb
+						Size : {{ projectData?.project_url }}kb
 					</h2>
-					<a :href="projectList?.project_url" target="blank_">Open project</a>
+					<a :href="projectData?.project_url" target="blank_">Open project</a>
 				</div>
 				<diV>
 					<button>fav</button>
