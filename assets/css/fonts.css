@@ -1,4 +1,14 @@
 @font-face {
 	font-family: "Nunito";
-	src: url("../fonts/Nunito");
+	src: url("../fonts/Nunito/Nunito-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Nunito-light";
+	src: url("../fonts/Nunito/Nunito-Light.ttf");
+}
+
+@font-face {
+	font-family: "Nunito-bold";
+	src: url("../fonts/Nunito/Nunito-ExtraBold.ttf");
 }
