@@ -89,7 +89,7 @@ div#app>section#sidebar-menu>div.logo-container>.text-logo {
 	margin: 0 0 20px 20px;
 }
 
-div#app>section#sidebar-menu>div.nav-container {
+div#app>section#sidebar-menu>ul.nav-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -97,12 +97,45 @@ div#app>section#sidebar-menu>div.nav-container {
 	padding: 0px;
 
 	width: 100%;
-	left: 0px;
-	top: 120px;
 
 	flex: none;
 	order: 1;
 	align-self: stretch;
 	flex-grow: 1;
 	margin: 0px 0px;
+
+	list-style: none;
+}
+
+div#app>section#sidebar-menu>ul.nav-container>li.list-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0px;
+
+	width: 100%;
+	height: 40px;
+
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+	margin: 15px 0px;
+}
+
+div#app>section#sidebar-menu>ul.nav-container>li.list-item>span.material-icons {
+	margin: 0;
+	margin-left: 35px;
+	margin-right: 15px;
+}
+
+div#app>section#sidebar-menu>ul.nav-container>li.list-item>span.list-item-label {
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+
+	color: #050507;
 }

@@ -9,6 +9,21 @@
 }
 
 @font-face {
+	font-family: "Nunito-SemiBold";
+	src: url("../fonts/Nunito/Nunito-SemiBold.ttf");
+}
+
+@font-face {
 	font-family: "Nunito-bold";
+	src: url("../fonts/Nunito/Nunito-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito-extraBold";
 	src: url("../fonts/Nunito/Nunito-ExtraBold.ttf");
+}
+
+@font-face {
+	font-family: "Nunito-black";
+	src: url("../fonts/Nunito/Nunito-Black.ttf");
 }
