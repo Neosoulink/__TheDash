@@ -130,11 +130,15 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 	text-decoration: none;
 }
 
-div#app>section#sidebar-menu>.nav-container>.list-item:hover {
+div#app>section#sidebar-menu>.nav-container>.list-item:hover,
+div#app>section#sidebar-menu>.nav-container>.list-item.selected {
 	color: #0079BF !important;
 	background-color: rgba(0, 121, 191, 0.02);
 }
 
+div#app>section#sidebar-menu>.nav-container>.list-item::after {
+	/* ... */
+}
 
 div#app>section#sidebar-menu>.nav-container .list-item>span.material-icons {
 	margin: 0;
