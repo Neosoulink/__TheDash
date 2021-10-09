@@ -116,6 +116,7 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 	justify-content: flex-start;
 	padding: 0px;
 
+	position: relative;
 	width: 100%;
 	height: 40px;
 
@@ -123,7 +124,7 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 	order: 1;
 	align-self: stretch;
 	flex-grow: 0;
-	margin: 15px 0px;
+	margin: 5px 0px;
 
 	color: #050507;
 
@@ -132,12 +133,21 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 
 div#app>section#sidebar-menu>.nav-container>.list-item:hover,
 div#app>section#sidebar-menu>.nav-container>.list-item.selected {
-	color: #0079BF !important;
+	color: #0079BF;
 	background-color: rgba(0, 121, 191, 0.02);
 }
 
-div#app>section#sidebar-menu>.nav-container>.list-item::after {
-	/* ... */
+div#app>section#sidebar-menu>.nav-container>.list-item.selected::after {
+	content: "";
+
+	position: absolute;
+	right: 10px;
+	height: 10px;
+	width: 10px;
+
+	border-radius: 5px;
+
+	background-color: #0079BF;
 }
 
 div#app>section#sidebar-menu>.nav-container .list-item>span.material-icons {
