@@ -88,3 +88,21 @@ div#app>section#sidebar-menu>div.logo-container>.text-logo {
 
 	margin: 0 0 20px 20px;
 }
+
+div#app>section#sidebar-menu>div.nav-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+
+	width: 100%;
+	left: 0px;
+	top: 120px;
+
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 1;
+	margin: 0px 0px;
+}

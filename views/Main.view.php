@@ -6,6 +6,10 @@
 		<div class="logo-container">
 			<h1 class="text-logo">_TheDash</h1>
 		</div>
+
+		<div class="nav-container">
+
+		</div>
 	</section>
 	<main id="main">d</main>
 </div>
