@@ -8,10 +8,10 @@
 		</div>
 
 		<ul class="nav-container">
-			<li class="list-item">
-				<span class="material-icons">face</span>
+			<a href="#" class="list-item">
+				<span class="material-icons">format_list_bulleted</span>
 				<span class="list-item-label">Project list</span>
-			</li>
+			</a>
 		</ul>
 	</section>
 	<main id="main">d</main>

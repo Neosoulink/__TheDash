@@ -4,14 +4,16 @@
 	box-sizing: bottom;
 
 	font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #050507;
 
 	scroll-behavior: smooth;
+
+	transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 body,
 html {
 	max-width: 100vw;
+	color: #050507;
 }
 
 /* Utils */
@@ -107,7 +109,7 @@ div#app>section#sidebar-menu>ul.nav-container {
 	list-style: none;
 }
 
-div#app>section#sidebar-menu>ul.nav-container>li.list-item {
+div#app>section#sidebar-menu>.nav-container .list-item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -122,20 +124,30 @@ div#app>section#sidebar-menu>ul.nav-container>li.list-item {
 	align-self: stretch;
 	flex-grow: 0;
 	margin: 15px 0px;
+
+	color: #050507;
+
+	text-decoration: none;
 }
 
-div#app>section#sidebar-menu>ul.nav-container>li.list-item>span.material-icons {
+div#app>section#sidebar-menu>.nav-container>.list-item:hover {
+	color: #0079BF !important;
+	background-color: rgba(0, 121, 191, 0.02);
+}
+
+
+div#app>section#sidebar-menu>.nav-container .list-item>span.material-icons {
 	margin: 0;
 	margin-left: 35px;
 	margin-right: 15px;
+
+	font-size: 30px;
 }
 
-div#app>section#sidebar-menu>ul.nav-container>li.list-item>span.list-item-label {
+div#app>section#sidebar-menu>.nav-container .list-item .list-item-label {
 	font-family: Nunito;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 27px;
-
-	color: #050507;
 }
