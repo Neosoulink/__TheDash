@@ -8,19 +8,10 @@
 		</div>
 
 		<ul class="nav-container">
-			<a href="#" class="list-item selected">
-				<span class="material-icons">format_list_bulleted</span>
-				<span class="list-item-label selected">Project list</span>
-			</a>
 
-			<a href="#" class="list-item">
-				<span class="material-icons">favorite_border</span>
-				<span class="list-item-label selected">Favoris</span>
-			</a>
-
-			<a href="#" class="list-item">
-				<span class="material-icons">settings</span>
-				<span class="list-item-label selected">Settings</span>
+			<a href="#" class="list-item" v-for="(item, index) in sidebarMenuList" :key="index" :class="((!currentModal || currentModal === null) && index === 0) || (currentModal === item?.label) ? 'selected' : ''" @click="currentModal = item?.label">
+				<span class="material-icons">{{ item?.icon }}</span>
+				<span class="list-item-label selected">{{ item?.label }}</span>
 			</a>
 		</ul>
 	</section>

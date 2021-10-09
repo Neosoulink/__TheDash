@@ -4,7 +4,13 @@ window.document.getElementById("JsonProjectList").remove();
 const RootComponent = {
 	data() {
 		return {
-			projectList: []
+			projectList: [],
+			sidebarMenuList: [
+				{ icon: "format_list_bulleted", label: "Project list" },
+				{ icon: "favorite_border", label: "Favoris" },
+				{ icon: "settings", label: "Settings" },
+			],
+			currentModal: null
 		}
 	},
 	mounted() {
