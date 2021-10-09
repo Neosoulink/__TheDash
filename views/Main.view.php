@@ -7,9 +7,12 @@
 			<h1 class="text-logo">_TheDash</h1>
 		</div>
 
-		<div class="nav-container">
-
-		</div>
+		<ul class="nav-container">
+			<li class="list-item">
+				<span class="material-icons">face</span>
+				<span class="list-item-label">Project list</span>
+			</li>
+		</ul>
 	</section>
 	<main id="main">d</main>
 </div>
