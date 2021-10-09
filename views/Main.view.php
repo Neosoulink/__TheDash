@@ -1,7 +1,4 @@
-<?php
-$JsonProjectList = json_encode(ProjectsManager::get_project_list());
-?>
-
+<?php $JsonProjectList = json_encode(ProjectsManager::get_project_list()); ?>
 <input id="JsonProjectList" type="hidden" value='<?= $JsonProjectList ?>'>
 
 <div id="app">

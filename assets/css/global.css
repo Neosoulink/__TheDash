@@ -8,67 +8,7 @@
 
 body,
 html {
-	background-color: whitesmoke;
-	max-width: 100%;
-}
-
-.screen {
-	max-width: 100%;
-	min-height: 100%;
-}
-
-header.nav {
-	box-shadow: 5px 0px 20px 0.5px rgba(0, 0, 0, 0.3);
-	height: 75px;
-	max-height: 75px;
-}
-
-header.nav>div,
-header.nav>h1 {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	padding: 0px 10px;
-}
-
-header.nav>h1 {
-	color: gray;
-	font-weight: 300;
-	font-size: 1.5rem;
-}
-
-main.body {
-	min-height: 70vh;
-	padding: 40px 10px 10px;
-}
-
-main.body>.body-title {
-	font-weight: 600;
-	font-size: 2rem;
-	margin-bottom: 20px;
-}
-
-main.body>section.project-list {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
-main.body>section.project-list>.project-item {
-	padding: 10px 20px;
-	background-color: rgba(0, 0, 0, 0.05);
-	border-radius: 5px;
-	margin-bottom: 20px;
-}
-
-main.body>section.project-list>.project-item .project-name {
-	font-weight: 400;
-	font-size: 1.5rem;
-	margin-bottom: 10px;
-}
-
-footer {
-	padding: 10px 10px 20px 10px;
+	max-width: 100vw;
 }
 
 .d-flex {
@@ -79,7 +19,7 @@ footer {
 	flex-direction: column;
 }
 
-.fill {
+.flex-grow {
 	flex-grow: 1;
 }
 
