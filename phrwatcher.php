@@ -60,8 +60,10 @@ $WATCH = [
  * to the $PROJECT_ROOT var.
  */
 $IGNORE = [
-	"./.git"
+	".\\.git",
+	".\\.env"
 ];
+
 
 // ---------------------- Dont Edit It ----------------------
 
