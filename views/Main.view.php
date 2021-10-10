@@ -23,7 +23,9 @@
 		</div>s
 	</section>
 
+
 	<main id="main">d</main>
+
 </div>
 
 <script src="<?= Helpers::getAssetsPath() ?>/js/Vue3.js"></script>
