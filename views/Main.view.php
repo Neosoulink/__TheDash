@@ -2,7 +2,7 @@
 <input id="JsonProjectList" type="hidden" value='<?= $JsonProjectList ?>'>
 
 <div id="app">
-	<!--<section id="sidebar-menu">
+	<section id="sidebar-menu">
 		<div class="logo-container">
 			<h1 class="text-logo">_TheDash</h1>
 		</div>
@@ -21,7 +21,7 @@
 				<p>Follow the instructions to embed the icon font in your</p>
 			</a>
 		</div>
-	</section>-->
+	</section>
 	<main id="main">d</main>
 </div>
 
