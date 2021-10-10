@@ -17,3 +17,6 @@ SessionManager::ss();
 // IMPORTANT: DEFINE A ROOTER !!!
 App::launchApp();
 //
+
+require_once _DIR__ . '/lib/php-hot-reloader/src/HotReloader.php';
+new HotReloader\HotReloader('//localhost/helpers/phrwatcher.php');
