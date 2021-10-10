@@ -13,7 +13,7 @@
 body,
 html {
 	max-width: 100vw;
-	color: var(--default-color);
+	color: #050507;
 }
 
 /* Utils */
@@ -52,7 +52,7 @@ div#app>section#sidebar-menu {
 	height: 100%;
 	left: 0px;
 	top: 0px;
-	background: var(--light-color);
+	background: #FAFAFA;
 	overflow: hidden;
 }
 
@@ -66,7 +66,7 @@ div#app>section#sidebar-menu>div.logo-container {
 	padding: 0;
 
 	width: 100%;
-	height: 120px;
+	height: var(--header-height);
 
 	/* Inside Auto Layout */
 	flex: none;
@@ -119,13 +119,13 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 	align-self: stretch;
 	flex-grow: 0;
 	margin: 5px 0px;
-	color: var(--default-color);
+	color: #050507;
 	text-decoration: none;
 }
 
 div#app>section#sidebar-menu>.nav-container>.list-item:hover,
 div#app>section#sidebar-menu>.nav-container>.list-item.selected {
-	color: var(--accent-color);
+	color: #0079BF;
 	background-color: rgba(0, 121, 191, 0.02);
 }
 
@@ -139,7 +139,7 @@ div#app>section#sidebar-menu>.nav-container>.list-item.selected::after {
 
 	border-radius: 5px;
 
-	background-color: var(--accent-color);
+	background-color: #0079BF;
 }
 
 div#app>section#sidebar-menu>.nav-container .list-item>span.material-icons {
@@ -178,7 +178,7 @@ div#app>section#sidebar-menu .gift-card {
 	left: 29px;
 	top: 701px;
 
-	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 96.47%);
+	background: linear-gradient(131.55deg, #050507 0%, rgba(5, 5, 7, 0.7) 96.47%);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 	border-radius: 20px;
 
@@ -194,7 +194,7 @@ div#app>section#sidebar-menu .gift-card {
 }
 
 div#app>section#sidebar-menu .gift-card:hover {
-	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 74.2%);
+	background: linear-gradient(131.55deg, #050507 0%, rgba(5, 5, 7, 0.7) 74.2%);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
