@@ -47,14 +47,13 @@ div#app>section#sidebar-menu {
 	flex-direction: column;
 	align-items: center;
 	padding: 0px;
-
 	position: fixed;
 	width: 260px;
 	height: 100%;
 	left: 0px;
 	top: 0px;
-
 	background: #FAFAFA;
+	overflow: hidden;
 }
 
 div#app>section#sidebar-menu>div.logo-container {
@@ -97,16 +96,13 @@ div#app>section#sidebar-menu>ul.nav-container {
 	justify-content: center;
 	align-items: center;
 	padding: 0px;
-
 	width: 100%;
-
 	flex: none;
-	order: 1;
 	align-self: stretch;
 	flex-grow: 1;
 	margin: 0px 0px;
-
 	list-style: none;
+	overflow: hidden auto;
 }
 
 div#app>section#sidebar-menu>.nav-container .list-item {
@@ -115,19 +111,15 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 	align-items: center;
 	justify-content: flex-start;
 	padding: 0px;
-
 	position: relative;
 	width: 100%;
 	height: 40px;
-
 	flex: none;
 	order: 1;
 	align-self: stretch;
 	flex-grow: 0;
 	margin: 5px 0px;
-
 	color: #050507;
-
 	text-decoration: none;
 }
 
@@ -164,4 +156,70 @@ div#app>section#sidebar-menu>.nav-container .list-item .list-item-label {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 27px;
+}
+
+div#app>section#sidebar-menu .gift-card-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 40vh;
+}
+
+div#app>section#sidebar-menu .gift-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	position: static;
+	width: 180px;
+	min-height: 175px;
+	left: 29px;
+	top: 701px;
+
+	background: linear-gradient(131.55deg, #050507 0%, rgba(5, 5, 7, 0.7) 96.47%);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+
+	/* Inside Auto Layout */
+
+	flex: none;
+	order: 2;
+	flex-grow: 0;
+	margin: 0px 0px;
+	padding: 15px 10px;
+	text-decoration: none;
+	color: white;
+}
+
+div#app>section#sidebar-menu .gift-card:hover {
+	background: linear-gradient(131.55deg, #050507 0%, rgba(5, 5, 7, 0.7) 74.2%);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+div#app>section#sidebar-menu .gift-card>* {
+	margin: 5px 0;
+	margin-left: 10px;
+}
+
+div#app>section#sidebar-menu .gift-card>.material-icons {
+	font-size: 35px;
+}
+
+div#app>section#sidebar-menu .gift-card>h2 {
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+div#app>section#sidebar-menu .gift-card>p {
+	font-family: "Nunito-SemiBold";
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
 }
