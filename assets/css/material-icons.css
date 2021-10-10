@@ -6,8 +6,6 @@
 	/* For IE6-8 */
 	src: local('Material Icons'),
 		local('MaterialIcons-Regular'),
-		url("../fonts/Material-icons/MaterialIconsOutlined-Regular.woff2") format('woff2'),
-		url("../fonts/Material-icons/MaterialIconsOutlined-Regular.woff") format('woff'),
 		url("../fonts/Material-icons/MaterialIconsOutlined-Regular.otf") format('truetype');
 }
 
