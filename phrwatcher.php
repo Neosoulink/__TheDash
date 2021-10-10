@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: text/event-stream");
 /**
  * PHP Hot Reloader Bootstrap File
  *
@@ -59,6 +59,7 @@ $WATCH = [
  */
 $IGNORE = [];
 
+
 // ---------------------- Dont Edit It ----------------------
 
-require_once @$_REQUEST["reloader_root"] . "../lib/php-hot-reloader/src/HotReloaderSSE.php";
+require_once @$_REQUEST["reloader_root"] . "/lib/php-hot-reloader/src/HotReloaderSSE.php";
