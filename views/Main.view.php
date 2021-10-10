@@ -4,7 +4,7 @@
 <div id="app">
 	<section id="sidebar-menu">
 		<div class="logo-container">
-			<h1 class="text-logo">_TheDash</h1>
+			<h1 class="text-logo"><?= getenv("APP_NAME") ?></h1>
 		</div>
 
 		<ul class="nav-container">
