@@ -174,7 +174,6 @@ div#app>section#sidebar-menu .gift-card {
 
 	position: static;
 	width: 180px;
-	min-height: 175px;
 	left: 29px;
 	top: 701px;
 
@@ -208,7 +207,6 @@ div#app>section#sidebar-menu .gift-card>.material-icons {
 }
 
 div#app>section#sidebar-menu .gift-card>h2 {
-	font-family: Nunito;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 22px;
@@ -216,10 +214,10 @@ div#app>section#sidebar-menu .gift-card>h2 {
 }
 
 div#app>section#sidebar-menu .gift-card>p {
-	font-family: "Nunito-SemiBold";
-	font-family: Nunito;
-	font-style: normal;
-	font-weight: normal;
 	font-size: 16px;
 	line-height: 22px;
+}
+
+div#app>main#main {
+	margin-left: var(--left-sidebar-width);
 }
