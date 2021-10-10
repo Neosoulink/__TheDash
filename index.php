@@ -18,5 +18,5 @@ SessionManager::ss();
 App::launchApp();
 //
 
-require_once _DIR__ . '/lib/php-hot-reloader/src/HotReloader.php';
+require_once __DIR__ . '/lib/php-hot-reloader/src/HotReloader.php';
 new HotReloader\HotReloader('//localhost/helpers/phrwatcher.php');
