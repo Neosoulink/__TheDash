@@ -23,7 +23,7 @@
 
 
 	/**
-	 * For additional security, input your development site address 
+	 * For additional security, input your development site address
 	 * to recognize in case of accidental migration into production.
 	 * By default, only locahost is enabled to run this script.
 	 */
@@ -58,9 +58,9 @@
 	 * to the $PROJECT_ROOT var.
 	 */
 	$IGNORE = [
-
+		"./.git"
 	];
 
 	// ---------------------- Dont Edit It ----------------------
 
-	require_once @$_REQUEST["reloader_root"] . "/src/HotReloaderSSE.php"; 
+	require_once @$_REQUEST["reloader_root"] . "/src/HotReloaderSSE.php";
