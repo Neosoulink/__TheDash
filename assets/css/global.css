@@ -7,7 +7,7 @@
 
 	scroll-behavior: smooth;
 
-	transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all .3s cubic-bezier(0.38, 0.63, 0.3, 1.15);
 }
 
 body,
@@ -79,15 +79,13 @@ div#app>section#sidebar-menu>div.logo-container {
 }
 
 div#app>section#sidebar-menu>div.logo-container>.text-logo {
-	font-family: "Nunito-bold";
-	font-style: normal;
-	font-weight: 800;
-	font-size: 34px;
-	line-height: 46px;
+	font-family: "Nunito-extraBold";
+	font-size: 30px;
 
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
 
-	margin: 0 0 20px 20px;
+	padding: 0;
+	margin: 0 0 5px 20px;
 }
 
 div#app>section#sidebar-menu>ul.nav-container {
