@@ -48,29 +48,31 @@
 			</div>
 
 			<div class="cards-projects-container">
-				<div class="card-project">
+				<div v-for="(item, index) in projectList" :key="index" class="card-project">
 					<div class="card-img">
 						<img src="<?= Helpers::getAssetsPath() ?>/img/computer-programming.png" />
 					</div>
 					<div class="card-body">
-						<h4 class="title">Project title</h4>
+						<h4 class="title">{{ item?.name }}</h4>
 						<div class="content">
 							<ul>
-								<li>d</li>
-								<li>d</li>
+								<li>Size : {{ item?.size }}kb</li>
+								<li>Permissions : {{ item?.permissions }}</li>
 							</ul>
 							<ul>
-								<li>d</li>
+								<li>Last access: {{ new Date(item?.last_access_time).toString().substr(0, 16) }}</li>
+								<li>Updated at: {{ new Date(item?.modification_time).toString().substr(0, 16) }}</li>
 							</ul>
 						</div>
 						<div class="footer">
 							<ul>
-								<li>d</li>
-								<li>d</li>
+								<li>
+									<span v-if="item?.builded_lang != 'Unknown'">{{ item?.builded_lang }}</span> <span v-else class="material-icons">code</span>
+								</li>
 							</ul>
-							<ul>
-								<li>d</li>
-							</ul>
+							<div>
+								<a :href="item?.project_url" target="blank_" class="btn btn-circle-icon"><span class="material-icons">visibility</span></a>
+							</div>
 						</div>
 					</div>
 				</div>

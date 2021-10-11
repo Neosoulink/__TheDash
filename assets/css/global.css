@@ -451,6 +451,10 @@ a {
 	padding: 0;
 }
 
+#app>#main>main .cards-projects-container .card-project>.card-body>.content>*>* {
+	margin-bottom: 5px;
+}
+
 #app>#main>main .cards-projects-container .card-project>.card-body>.footer {
 	display: flex;
 	flex-direction: row;

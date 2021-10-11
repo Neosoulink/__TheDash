@@ -22,5 +22,8 @@ const RootComponent = {
 	},
 }
 
+
 const app = Vue.createApp(RootComponent);
 const vm = app.mount('#app');
+
+console.log(vm.projectList)
