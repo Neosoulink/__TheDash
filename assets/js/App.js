@@ -8,6 +8,8 @@ const RootComponent = {
 			sidebarMenuList: [
 				{ icon: "format_list_bulleted", label: "Project list" },
 				{ icon: "favorite_border", label: "Favoris" },
+				{ icon: "handyman", label: "Tools" },
+				{ icon: "help_outline", label: "Infos" },
 				{ icon: "settings", label: "Settings" },
 			],
 			currentModal: null
