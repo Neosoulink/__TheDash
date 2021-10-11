@@ -2,11 +2,19 @@
 	/* COLORS */
 	--default-color: #050507;
 	--accent-color: #0079BF;
-	--light-color: #FAFAFA;
+	--light-color: #F9F9F9;
+	--gray-color: #B2B4BC;
 
 	/* SIZES */
-	--header-height: 80px;
+	--default-font-size: 14px;
+	--default-control-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.13);
+	--default-control-height: 40px;
+
+	--header-height: 100px;
 	--left-sidebar-width: 260px;
+
+	--main-width: calc(100% - var(--left-sidebar-width));
+
 
 	/* FONTS */
 }
