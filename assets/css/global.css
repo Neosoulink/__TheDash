@@ -137,7 +137,7 @@ html {
 }
 
 /* Dom elements */
-div#app>#sidebar-menu {
+#app>#sidebar-menu {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -151,7 +151,7 @@ div#app>#sidebar-menu {
 	overflow: hidden;
 }
 
-div#app>#sidebar-menu>div.logo-container {
+#app>#sidebar-menu>div.logo-container {
 	/* Auto Layout */
 	display: flex;
 	flex-direction: column;
@@ -170,7 +170,7 @@ div#app>#sidebar-menu>div.logo-container {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
-div#app>#sidebar-menu>div.logo-container>.text-logo {
+#app>#sidebar-menu>div.logo-container>.text-logo {
 	font-family: "Nunito-extraBold";
 	font-size: 30px;
 	color: var(--default-color);
@@ -182,7 +182,7 @@ div#app>#sidebar-menu>div.logo-container>.text-logo {
 	margin: 0 0 5px 20px;
 }
 
-div#app>#sidebar-menu>ul.nav-container {
+#app>#sidebar-menu>ul.nav-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -197,7 +197,7 @@ div#app>#sidebar-menu>ul.nav-container {
 	overflow: hidden auto;
 }
 
-div#app>#sidebar-menu>.nav-container .list-item {
+#app>#sidebar-menu>.nav-container .list-item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -215,13 +215,13 @@ div#app>#sidebar-menu>.nav-container .list-item {
 	text-decoration: none;
 }
 
-div#app>#sidebar-menu>.nav-container>.list-item:hover,
-div#app>#sidebar-menu>.nav-container>.list-item.selected {
+#app>#sidebar-menu>.nav-container>.list-item:hover,
+#app>#sidebar-menu>.nav-container>.list-item.selected {
 	color: var(--accent-color);
 	background-color: rgba(0, 121, 191, 0.02);
 }
 
-div#app>#sidebar-menu>.nav-container>.list-item.selected::after {
+#app>#sidebar-menu>.nav-container>.list-item.selected::after {
 	content: "";
 
 	position: absolute;
@@ -234,7 +234,7 @@ div#app>#sidebar-menu>.nav-container>.list-item.selected::after {
 	background-color: var(--accent-color);
 }
 
-div#app>#sidebar-menu>.nav-container .list-item>.icon {
+#app>#sidebar-menu>.nav-container .list-item>.icon {
 	margin: 0;
 	margin-left: 35px;
 	margin-right: 15px;
@@ -243,14 +243,14 @@ div#app>#sidebar-menu>.nav-container .list-item>.icon {
 	width: 30px;
 }
 
-div#app>#sidebar-menu>.nav-container .list-item .list-item-label {
+#app>#sidebar-menu>.nav-container .list-item .list-item-label {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 27px;
 }
 
-div#app>#sidebar-menu .gift-card-container {
+#app>#sidebar-menu .gift-card-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -259,7 +259,7 @@ div#app>#sidebar-menu .gift-card-container {
 	min-height: 40vh;
 }
 
-div#app>#sidebar-menu .gift-card {
+#app>#sidebar-menu .gift-card {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -284,37 +284,37 @@ div#app>#sidebar-menu .gift-card {
 	color: var(--light-color);
 }
 
-div#app>#sidebar-menu .gift-card:hover {
+#app>#sidebar-menu .gift-card:hover {
 	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 74.2%);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
-div#app>#sidebar-menu .gift-card>* {
+#app>#sidebar-menu .gift-card>* {
 	margin: 5px 0;
 	margin-left: 10px;
 }
 
-div#app>#sidebar-menu .gift-card>.material-icons {
+#app>#sidebar-menu .gift-card>.material-icons {
 	font-size: 35px;
 }
 
-div#app>#sidebar-menu .gift-card>h2 {
+#app>#sidebar-menu .gift-card>h2 {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 22px;
 	line-height: 30px;
 }
 
-div#app>#sidebar-menu .gift-card>p {
+#app>#sidebar-menu .gift-card>p {
 	line-height: 22px;
 }
 
-div#app>#main {
+#app>#main {
 	margin-left: var(--left-sidebar-width);
 	width: calc(100% - var(--left-sidebar-width));
 }
 
-div#app>#main>header.main-header {
+#app>#main>header.main-header {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -328,6 +328,6 @@ div#app>#main>header.main-header {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
-div#app>#main>header.main-header>* {
+#app>#main>header.main-header>* {
 	margin-right: 20px;
 }
