@@ -47,6 +47,35 @@
 				</select>
 			</div>
 
+			<div class="cards-projects-container">
+				<div class="card-project">
+					<div class="card-img">
+						<img src="<?= Helpers::getAssetsPath() ?>/img/computer-programming.png" />
+					</div>
+					<div class="card-body">
+						<h4 class="title">Project title</h4>
+						<div class="content">
+							<ul>
+								<li>d</li>
+								<li>d</li>
+							</ul>
+							<ul>
+								<li>d</li>
+							</ul>
+						</div>
+						<div class="footer">
+							<ul>
+								<li>d</li>
+								<li>d</li>
+							</ul>
+							<ul>
+								<li>d</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</main>
 		<footer>
 			<h3><span class="text-semi-bold"><?= getenv("APP_NAME") ?></span>@<?= (new DateTime())->format("Y") ?> | <a href="https://github.com/Neosoulink/__TheDash" target="blank_" title="See github repo" class="text-accent">Github</a></h3>

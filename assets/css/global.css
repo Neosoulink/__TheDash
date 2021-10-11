@@ -13,6 +13,7 @@
 body,
 html {
 	max-width: 100vw;
+	background-color: white;
 	color: var(--default-color);
 	/*overflow: hidden;*/
 }
@@ -380,6 +381,110 @@ a {
 
 #app>#main>main .header-title-container>select option {
 	color: var(--default-color);
+}
+
+#app>#main>main .cards-projects-container .card-project {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+
+	min-height: 200px;
+	max-height: 250px;
+	overflow: hidden;
+
+	background: white;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+
+	margin: 0px;
+	margin-bottom: 30px;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	width: 200px;
+	background: rgba(0, 0, 0, 0.01);
+	border-radius: 20px;
+	align-self: stretch;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-img>img {
+	width: 60%;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 30px 40px 10px;
+
+	position: static;
+	flex: 1;
+	align-self: stretch;
+	color: var(--gray-color);
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.title {
+	color: var(--default-color);
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.content {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+
+	flex: 1;
+	align-self: stretch;
+	margin: 10px 0;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.content>* {
+	flex: 1;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	align-self: stretch;
+	padding: 10px 0;
+	margin: 0;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer>* {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex: 1;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*:last-child{
+	justify-content: flex-end !important;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*>* {
+	margin: 0;
+	margin-right: 10px;
+	padding: 0;
+}
+
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*:last-child>* {
+	margin-right: 0;
+	margin-left: 10px;
 }
 
 #app>#main>footer {
