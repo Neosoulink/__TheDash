@@ -66,6 +66,7 @@ a {
 
 	background-color: var(--light-color);
 	border-style: hidden;
+	border-radius: 5px;
 	outline: 1px solid transparent;
 
 	width: 200px;
@@ -84,8 +85,11 @@ a {
 }
 
 .input:focus {
-	width: 300px;
 	box-shadow: var(--default-control-box-shadow);
+}
+
+.input.extend:focus {
+	width: 300px;
 }
 
 .rounded-input {
@@ -359,13 +363,23 @@ a {
 	overflow: hidden auto;
 }
 
-#app>#main>main>.title-container {
+#app>#main>main .header-title-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0px;
 	margin: 30px 0px;
+}
+
+#app>#main>main .header-title-container>select {
+	background-color: transparent;
+	font-weight: 600;
+	line-height: 25px;
+}
+
+#app>#main>main .header-title-container>select option {
+	color: var(--default-color);
 }
 
 #app>#main>footer {

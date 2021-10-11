@@ -35,14 +35,25 @@
 			<a href="https://github.com/Neosoulink/__TheDash" target="blank_" title="See github repo" class="btn btn-circle-icon"><img src="<?= Helpers::getAssetsPath() ?>/svg/logos/github.svg" class="icon" /></a>
 		</header>
 		<main>
+			<div class="header-title-container">
+				<h2>Project list</h2>
+
+				<div>
+
+				</div>
+				<select class="input">
+					<option>Order by</option>
+					<option v-for="(label, index) in orderByOptions" :key="index">label</option>
+				</select>
+			</div>
 
 		</main>
 		<footer>
 			<h3><span class="text-semi-bold"><?= getenv("APP_NAME") ?></span>@<?= (new DateTime())->format("Y") ?> | <a href="https://github.com/Neosoulink/__TheDash" target="blank_" title="See github repo" class="text-accent">Github</a></h3>
 			<h3><?= (!empty(Helpers::get_parsed_phpinfo()["apache2handler"]) &&
 						!empty(Helpers::get_parsed_phpinfo()["apache2handler"]["Apache Version"])) ?
-					Helpers::get_parsed_phpinfo()["apache2handler"]["Apache Version"] :
-					"Php version : " .  Helpers::get_parsed_phpinfo()["Core"]["PHP Version"]; ?>
+						Helpers::get_parsed_phpinfo()["apache2handler"]["Apache Version"] :
+						"Php version : " .  Helpers::get_parsed_phpinfo()["Core"]["PHP Version"]; ?>
 			</h3>
 		</footer>
 	</section>
