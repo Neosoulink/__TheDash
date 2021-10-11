@@ -22,6 +22,26 @@ a {
 	text-decoration: none;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--light-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--gray-color);
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
 /* Utils */
 .container {
 	padding: 0px 5vw;
