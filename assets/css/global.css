@@ -137,7 +137,7 @@ html {
 }
 
 /* Dom elements */
-div#app>section#sidebar-menu {
+div#app>#sidebar-menu {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -151,7 +151,7 @@ div#app>section#sidebar-menu {
 	overflow: hidden;
 }
 
-div#app>section#sidebar-menu>div.logo-container {
+div#app>#sidebar-menu>div.logo-container {
 	/* Auto Layout */
 	display: flex;
 	flex-direction: column;
@@ -170,7 +170,7 @@ div#app>section#sidebar-menu>div.logo-container {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
-div#app>section#sidebar-menu>div.logo-container>.text-logo {
+div#app>#sidebar-menu>div.logo-container>.text-logo {
 	font-family: "Nunito-extraBold";
 	font-size: 30px;
 	color: var(--default-color);
@@ -182,7 +182,7 @@ div#app>section#sidebar-menu>div.logo-container>.text-logo {
 	margin: 0 0 5px 20px;
 }
 
-div#app>section#sidebar-menu>ul.nav-container {
+div#app>#sidebar-menu>ul.nav-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -197,7 +197,7 @@ div#app>section#sidebar-menu>ul.nav-container {
 	overflow: hidden auto;
 }
 
-div#app>section#sidebar-menu>.nav-container .list-item {
+div#app>#sidebar-menu>.nav-container .list-item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -215,13 +215,13 @@ div#app>section#sidebar-menu>.nav-container .list-item {
 	text-decoration: none;
 }
 
-div#app>section#sidebar-menu>.nav-container>.list-item:hover,
-div#app>section#sidebar-menu>.nav-container>.list-item.selected {
+div#app>#sidebar-menu>.nav-container>.list-item:hover,
+div#app>#sidebar-menu>.nav-container>.list-item.selected {
 	color: var(--accent-color);
 	background-color: rgba(0, 121, 191, 0.02);
 }
 
-div#app>section#sidebar-menu>.nav-container>.list-item.selected::after {
+div#app>#sidebar-menu>.nav-container>.list-item.selected::after {
 	content: "";
 
 	position: absolute;
@@ -234,7 +234,7 @@ div#app>section#sidebar-menu>.nav-container>.list-item.selected::after {
 	background-color: var(--accent-color);
 }
 
-div#app>section#sidebar-menu>.nav-container .list-item>.icon {
+div#app>#sidebar-menu>.nav-container .list-item>.icon {
 	margin: 0;
 	margin-left: 35px;
 	margin-right: 15px;
@@ -243,14 +243,14 @@ div#app>section#sidebar-menu>.nav-container .list-item>.icon {
 	width: 30px;
 }
 
-div#app>section#sidebar-menu>.nav-container .list-item .list-item-label {
+div#app>#sidebar-menu>.nav-container .list-item .list-item-label {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 27px;
 }
 
-div#app>section#sidebar-menu .gift-card-container {
+div#app>#sidebar-menu .gift-card-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -259,7 +259,7 @@ div#app>section#sidebar-menu .gift-card-container {
 	min-height: 40vh;
 }
 
-div#app>section#sidebar-menu .gift-card {
+div#app>#sidebar-menu .gift-card {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -284,37 +284,37 @@ div#app>section#sidebar-menu .gift-card {
 	color: var(--light-color);
 }
 
-div#app>section#sidebar-menu .gift-card:hover {
+div#app>#sidebar-menu .gift-card:hover {
 	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 74.2%);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
-div#app>section#sidebar-menu .gift-card>* {
+div#app>#sidebar-menu .gift-card>* {
 	margin: 5px 0;
 	margin-left: 10px;
 }
 
-div#app>section#sidebar-menu .gift-card>.material-icons {
+div#app>#sidebar-menu .gift-card>.material-icons {
 	font-size: 35px;
 }
 
-div#app>section#sidebar-menu .gift-card>h2 {
+div#app>#sidebar-menu .gift-card>h2 {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 22px;
 	line-height: 30px;
 }
 
-div#app>section#sidebar-menu .gift-card>p {
+div#app>#sidebar-menu .gift-card>p {
 	line-height: 22px;
 }
 
-div#app>main#main {
+div#app>#main {
 	margin-left: var(--left-sidebar-width);
 	width: calc(100% - var(--left-sidebar-width));
 }
 
-div#app>main#main>header.main-header {
+div#app>#main>header.main-header {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -328,6 +328,6 @@ div#app>main#main>header.main-header {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
-div#app>main#main>header.main-header>* {
+div#app>#main>header.main-header>* {
 	margin-right: 20px;
 }
