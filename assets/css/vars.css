@@ -10,7 +10,9 @@
 	--default-control-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.13);
 	--default-control-height: 40px;
 
+	--main-line-margin-x-space: 50px;
 	--header-height: 100px;
+	--footer-height: 60px;
 	--left-sidebar-width: 260px;
 
 	--main-width: calc(100% - var(--left-sidebar-width));

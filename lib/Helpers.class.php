@@ -97,14 +97,6 @@ class Helpers
 	/**
 	 *
 	 */
-	public static function get_http_user_agent()
-	{
-		return (!empty($_SERVER['HTTP_USER_AGENT'])) ? $_SERVER['HTTP_USER_AGENT'] : '';
-	}
-
-	/**
-	 *
-	 */
 	public static function detect_browser(String $data)
 	{
 		$user_agent = (!empty($data)) ? $data : App::getHttpUserAgent();

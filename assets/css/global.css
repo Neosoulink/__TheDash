@@ -17,7 +17,15 @@ html {
 	/*overflow: hidden;*/
 }
 
+a {
+	text-decoration: none;
+}
+
 /* Utils */
+.container {
+	padding: 0px 5vw;
+}
+
 .d-flex {
 	display: flex;
 }
@@ -40,6 +48,14 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.text-semi-bold {
+	font-weight: 600 !important;
+}
+
+.text-accent {
+	color: var(--accent-color);
 }
 
 .input {
@@ -269,6 +285,7 @@ html {
 	left: 29px;
 	top: 701px;
 
+	opacity: 0.9;
 	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 96.47%);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 	border-radius: 20px;
@@ -285,7 +302,8 @@ html {
 }
 
 #app>#sidebar-menu .gift-card:hover {
-	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 74.2%);
+	opacity: 1;
+	/*background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 74.2%);*/
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -310,8 +328,10 @@ html {
 }
 
 #app>#main {
-	margin-left: var(--left-sidebar-width);
 	width: calc(100% - var(--left-sidebar-width));
+	min-height: 100vh;
+
+	margin-left: var(--left-sidebar-width);
 }
 
 #app>#main>header.main-header {
@@ -319,15 +339,53 @@ html {
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 0 50px 0 0;
 
 	position: static;
 	height: var(--header-height);
+	padding: 0 var(--main-line-margin-x-space);
 
 	background: #FFFFFF;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 #app>#main>header.main-header>* {
-	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#app>#main>main {
+	padding: 20px var(--main-line-margin-x-space);
+	min-height: calc(100vh - var(--header-height) - var(--footer-height) - 42px);
+	max-width: 100%;
+	overflow: hidden auto;
+}
+
+#app>#main>main>.title-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0px;
+	margin: 30px 0px;
+}
+
+#app>#main>footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	height: var(--footer-height);
+
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0;
+	padding: 0 var(--main-line-margin-x-space);
+}
+
+#app>#main>footer>h3 {
+	font-weight: normal;
+	font-size: var(--default-font-size);
 }
