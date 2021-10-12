@@ -360,9 +360,10 @@ a {
 
 #app>#main {
 	width: calc(100% - var(--left-sidebar-width));
-	min-height: 100vh;
+	height: 100%;
 
 	margin-left: var(--left-sidebar-width);
+	overflow: hidden;
 }
 
 #app>#main>header.main-header {
@@ -385,8 +386,7 @@ a {
 
 #app>#main>main {
 	padding: 20px var(--main-line-margin-x-space);
-	min-height: calc(100vh - var(--header-height) - var(--footer-height) - 42px);
-	max-width: 100%;
+	height: calc(100vh - var(--header-height) - var(--footer-height) - 42px);
 	overflow: hidden auto;
 }
 
@@ -502,7 +502,7 @@ a {
 	padding: 0;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*:last-child{
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*:last-child {
 	justify-content: flex-end !important;
 }
 
