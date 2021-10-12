@@ -8,6 +8,7 @@
 	/* SIZES */
 	--default-font-size: 14px;
 	--default-control-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.13);
+	--default-control-box-shadow-light: 0px 2px 4px rgba(0, 0, 0, 0.07);
 	--default-control-height: 40px;
 
 	--main-line-margin-x-space: 50px;

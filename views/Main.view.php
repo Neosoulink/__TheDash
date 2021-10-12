@@ -71,7 +71,7 @@
 								</li>
 							</ul>
 							<div>
-								<a :href="item?.project_url" target="blank_" class="btn btn-circle-icon"><span class="material-icons">visibility</span></a>
+								<a :href="item?.project_url" target="blank_" class="btn btn-light btn-circle-icon"><span class="material-icons icon">visibility</span></a>
 							</div>
 						</div>
 					</div>

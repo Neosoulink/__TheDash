@@ -160,6 +160,11 @@ a {
 	cursor: pointer;
 }
 
+.btn-light {
+	background-color: white;
+	box-shadow: var(--default-control-box-shadow-light);
+}
+
 .btn:hover {
 	box-shadow: var(--default-control-box-shadow);
 }
@@ -359,6 +364,10 @@ a {
 }
 
 #app>#main {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
 	width: calc(100% - var(--left-sidebar-width));
 	height: 100%;
 
@@ -375,6 +384,7 @@ a {
 	position: static;
 	height: var(--header-height);
 	padding: 0 var(--main-line-margin-x-space);
+	width: 100;
 
 	background: #FFFFFF;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
@@ -386,7 +396,7 @@ a {
 
 #app>#main>main {
 	padding: 20px var(--main-line-margin-x-space);
-	height: calc(100vh - var(--header-height) - var(--footer-height) - 42px);
+	flex: 1;
 	overflow: hidden auto;
 }
 
