@@ -43,6 +43,30 @@ a {
 }
 
 /* Utils */
+.text-center {
+	text-align: center;
+}
+
+.text-default-color {
+	color: var(--default-color);
+}
+
+.text-danger{
+	color: var(--danger-color);
+}
+
+.text-success {
+	color: var(--success-color);
+}
+
+.text-accent {
+	color: var(--accent-color);
+}
+
+.text-semi-bold {
+	font-weight: 600 !important;
+}
+
 .container {
 	padding: 0px 5vw;
 }
@@ -69,14 +93,6 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.text-semi-bold {
-	font-weight: 600 !important;
-}
-
-.text-accent {
-	color: var(--accent-color);
 }
 
 .input {
