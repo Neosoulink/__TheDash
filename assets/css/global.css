@@ -178,6 +178,12 @@ a {
 }
 
 /* Dom elements */
+#app {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
 #app>#sidebar-menu {
 	display: flex;
 	flex-direction: column;
