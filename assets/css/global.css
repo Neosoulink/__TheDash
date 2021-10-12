@@ -543,6 +543,10 @@ a {
 	margin-left: 10px;
 }
 
+#app>#main>main .cards-projects-container .card-project>.card-body>.footer .img-icon {
+	height: 20px;
+}
+
 #app>#main>footer {
 	display: flex;
 	flex-direction: row;

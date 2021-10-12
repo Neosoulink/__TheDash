@@ -67,7 +67,7 @@
 						<div class="footer">
 							<ul>
 								<li>
-									<span v-if="item?.builded_lang != 'Unknown'">{{ item?.builded_lang }}</span> <span v-else class="material-icons">code</span>
+									<img class="img-icon" v-if="item?.builded_lang != 'Unknown'" :src="`<?= Helpers::getAssetsPath() ?>/svg/builded_env/${item?.builded_lang?.toLowerCase()}.svg`" />
 								</li>
 							</ul>
 							<div>
