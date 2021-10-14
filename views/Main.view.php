@@ -8,7 +8,7 @@
 		</div>
 
 		<ul class="nav-container">
-			<a href="#" class="list-item" v-for="(item, index) in sidebarMenuList" :key="index" :class="((!currentModal || currentModal === null) && index === 0) || (currentModal === item?.label) ? 'selected' : ''" @click="currentModal = item?.label">
+			<a href="#" class="list-item" v-for="(item, index) in sidebarMenuList" :key="index" :class="((!currentModal || currentModal === null) && index === 0) || (currentModal === item?.label) ? 'selected' : ''" @click="currentModal = item?.id">
 				<span class="material-icons icon">{{ item?.icon }}</span>
 				<span class="list-item-label selected">{{ item?.label }}</span>
 			</a>
@@ -93,9 +93,11 @@
 		</footer>
 	</section>
 
-	<div class="modal">
+	<div class="modal" v-if="currentModal === 2">
 		<div class="card-content">
-			<button class="btn btn-light btn-circle-icon close-btn"><span class="material-icons icon">close</span></button>
+			<button class="btn btn-light btn-circle-icon close-btn" @click="currentModal = null">
+				<span class="material-icons icon">close</span>
+			</button>
 			<h3 class="card-title">Favoris</h3>
 
 			<div class="card-body">

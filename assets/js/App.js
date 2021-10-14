@@ -6,13 +6,14 @@ const RootComponent = {
 		return {
 			projectList: [],
 			sidebarMenuList: [
-				{ icon: "format_list_bulleted", label: "Project list" },
-				{ icon: "favorite_border", label: "Favoris" },
-				{ icon: "handyman", label: "Tools" },
-				{ icon: "help_outline", label: "Infos" },
-				{ icon: "settings", label: "Settings" },
+				{ icon: "format_list_bulleted", label: "Project list", id: 1 },
+				{ icon: "favorite_border", label: "Favoris", id: 2 },
+				{ icon: "handyman", label: "Tools", id: 3 },
+				{ icon: "help_outline", label: "Infos", id: 4 },
+				{ icon: "settings", label: "Settings", id: 5 },
 			],
-			currentModal: null
+			currentModal: null,
+			orderByOptions: [],
 		}
 	},
 	mounted() {
