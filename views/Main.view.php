@@ -92,6 +92,16 @@
 			</h3>
 		</footer>
 	</section>
+
+	<div class="modal">
+		<div class="card-content">
+			<h3 class="card-title">Favoris</h3>
+
+			<div class="card-body">
+
+			</div>
+		</div>
+	</div>
 </div>
 
 <script src="<?= Helpers::getAssetsPath() ?>/js/Vue3.js"></script>

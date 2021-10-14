@@ -15,7 +15,7 @@ html {
 	max-width: 100vw;
 	background-color: white;
 	color: var(--default-color);
-	/*overflow: hidden;*/
+	overflow: hidden auto;
 }
 
 a {
@@ -201,7 +201,7 @@ a {
 /* Dom elements */
 #app {
 	height: 100vh;
-	width: 100%;
+	width: 100vw;
 	overflow: hidden;
 }
 
@@ -220,7 +220,6 @@ a {
 }
 
 #app>#sidebar-menu>div.logo-container {
-	/* Auto Layout */
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -567,4 +566,61 @@ a {
 #app>#main>footer>h3 {
 	font-weight: normal;
 	font-size: var(--default-font-size);
+}
+
+#app .modal {
+	display: flex;
+	justify-content: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100vw;
+	overflow: hidden auto;
+
+	/*display: none;*/
+	z-index: 9998;
+}
+
+#app .modal.visible {
+	display: flex;
+}
+
+#app .modal::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+#app .modal>.card-content {
+	background-color: white;
+
+	border-radius: 20px;
+	box-shadow: var(--default-control-box-shadow);
+
+	min-height: 80vh;
+	width: 100%;
+
+
+	padding: 50px 40px 20px 40px;
+	margin: 10vh 20vw;
+
+	z-index: 9999;
+}
+
+#app .modal>.card-content .card-title {
+	font-size: 25px;
+	margin-bottom: 25px;
+}
+
+#app .modal>.card-content .card-body {
+	height: 2000px;
 }
