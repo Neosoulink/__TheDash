@@ -95,6 +95,7 @@
 
 	<div class="modal">
 		<div class="card-content">
+			<button class="btn btn-light btn-circle-icon close-btn"><span class="material-icons icon">close</span></button>
 			<h3 class="card-title">Favoris</h3>
 
 			<div class="card-body">

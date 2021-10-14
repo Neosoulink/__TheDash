@@ -571,6 +571,7 @@ a {
 #app .modal {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	position: absolute;
 	top: 0;
@@ -578,7 +579,7 @@ a {
 
 	height: 100%;
 	width: 100vw;
-	overflow: hidden auto;
+	overflow: hidden;
 
 	/*display: none;*/
 	z-index: 9998;
@@ -606,14 +607,21 @@ a {
 	border-radius: 20px;
 	box-shadow: var(--default-control-box-shadow);
 
-	min-height: 80vh;
+	position: relative;
+	height: 70vh;
 	width: 100%;
-
+	overflow: hidden;
 
 	padding: 50px 40px 20px 40px;
-	margin: 10vh 20vw;
+	margin: auto 20vw;
 
 	z-index: 9999;
+}
+
+#app .modal>.card-content .close-btn {
+	position: absolute;
+	right: 40px;
+	top: 50px;
 }
 
 #app .modal>.card-content .card-title {
@@ -622,5 +630,6 @@ a {
 }
 
 #app .modal>.card-content .card-body {
-	height: 2000px;
+	padding: 20px 0px;
+	overflow: hidden auto;
 }
