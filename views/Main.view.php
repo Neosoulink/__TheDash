@@ -33,7 +33,7 @@
 		</footer>
 	</section>
 
-	<div class="modal" v-if="showModal" @click.self="currentModal = null">
+	<div class="modal" :class="{visible: showModal}" @click.self="currentModal = null">
 		<div class="card-content">
 			<button class="btn btn-light btn-circle-icon close-btn" @click="currentModal = null">
 				<span class="material-icons icon">close</span>
