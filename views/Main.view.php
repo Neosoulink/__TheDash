@@ -9,7 +9,7 @@
 		<!-- HEADER -->
 		<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/Header.php") ?>
 
-		<!-- MAIN -->
+		<!-- MAIN ROUTE VIEWS -->
 		<main>
 			<!-- PROJECT LIST (HOME) -->
 			<template v-if="currentModal === 1">
