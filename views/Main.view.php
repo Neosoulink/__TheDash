@@ -11,9 +11,12 @@
 
 		<!-- MAIN -->
 		<main>
+			<!-- PROJECT LIST (HOME) -->
 			<template v-if="currentModal === 1">
 				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/projectList.php") ?>
 			</template>
+
+			<!-- FAVORITES -->
 			<template v-if="currentModal === 2">
 				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/Favoris.php") ?>
 			</template>
@@ -38,8 +41,5 @@
 	</div>
 </div>
 
-<script src="<?= Helpers::getAssetsPath() ?>/js/Vue3.js"></script>
-<script type="module" src="<?= Helpers::getAssetsPath() ?>/js/App.js"></script>
-<?php
-require Helpers::getRelativeRootPath() . '/lib/php-hot-reloader/src/HotReloader.php';
-new HotReloader\HotReloader('//localhost/' . getenv('APP_NAME') . '/phrwatcher.php');
+<!-- SCRIPTS -->
+<?php require(Helpers::getRelativeRootPath() . "/components/Scripts.php") ?>
