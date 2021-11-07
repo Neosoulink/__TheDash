@@ -6,15 +6,10 @@
 	<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/SideBar.php") ?>
 
 	<section id="main">
-		<header class="main-header">
-			<div class="input-icon-wrapper">
-				<span class="material-icons icon">search</span>
-				<input type="search" class="rounded-input input" placeholder="Search a project" title="Search a project" v-model="searchInp" />
-			</div>
+		<!-- HEADER -->
+		<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/Header.php") ?>
 
-			<a href="#" title="Support the creator on github" class="btn btn-circle-icon"><span class="material-icons icon">redeem</span></a>
-			<a href="https://github.com/Neosoulink/__TheDash" target="blank_" title="See github repo" class="btn btn-circle-icon"><img src="<?= Helpers::getAssetsPath() ?>/svg/logos/github.svg ?>" class="icon" /></a>
-		</header>
+		<!-- MAIN -->
 		<main>
 			<template v-if="currentModal === 1">
 				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/projectList.php") ?>
@@ -23,14 +18,10 @@
 				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/Favoris.php") ?>
 			</template>
 		</main>
-		<footer>
-			<h3><span class="text-semi-bold"><?= getenv("APP_NAME") ?></span>@<?= (new DateTime())->format("Y") ?> | <a href="https://github.com/Neosoulink/__TheDash" target="blank_" title="See github repo" class="text-accent">Github</a></h3>
-			<h3><?= (!empty(Helpers::get_parsed_phpinfo()["apache2handler"]) &&
-						!empty(Helpers::get_parsed_phpinfo()["apache2handler"]["Apache Version"])) ?
-						Helpers::get_parsed_phpinfo()["apache2handler"]["Apache Version"] :
-						"Php version : " .  Helpers::get_parsed_phpinfo()["Core"]["PHP Version"]; ?>
-			</h3>
-		</footer>
+
+		<!-- FOOTER -->
+		<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/Footer.php") ?>
+
 	</section>
 
 	<div class="modal" :class="{visible: showModal}" @click.self="currentModal = null">
