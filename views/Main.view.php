@@ -42,4 +42,4 @@
 </div>
 
 <!-- SCRIPTS -->
-<?php require(Helpers::getRelativeRootPath() . "/components/Scripts.php") ?>
+<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/Scripts.php") ?>
