@@ -28,7 +28,7 @@
 		<header class="main-header">
 			<div class="input-icon-wrapper">
 				<span class="material-icons icon">search</span>
-				<input type="search" class="rounded-input input" placeholder="Search a project" title="Search a project" />
+				<input type="search" class="rounded-input input" placeholder="Search a project" title="Search a project" v-model="searchInp" />
 			</div>
 
 			<a href="#" title="Support the creator on github" class="btn btn-circle-icon"><span class="material-icons icon">redeem</span></a>
@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="cards-projects-container">
-				<div v-for="(item, index) in projectList" :key="index" class="card-project">
+				<div v-for="(item, index) in projectListFiltered" :key="index" class="card-project">
 					<div class="card-img">
 						<img src="<?= Helpers::getAssetsPath() ?>/img/computer-programming.png" />
 					</div>

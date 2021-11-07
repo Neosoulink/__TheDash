@@ -5,6 +5,7 @@ const RootComponent = {
 	data() {
 		return {
 			projectList: [],
+			searchInp: "",
 			sidebarMenuList: [
 				{ icon: "format_list_bulleted", label: "Project list", id: 1 },
 				{ icon: "favorite_border", label: "Favoris", id: 2 },
@@ -16,6 +17,16 @@ const RootComponent = {
 			orderByOptions: [],
 		}
 	},
+	methods: {
+
+	},
+	computed: {
+		projectListFiltered() {
+			return this.projectList.filter(item => {
+				return new RegExp(this.searchInp, 'ig').test(item.name)
+			});
+		}
+	},
 	mounted() {
 		this.projectList = JsonProjectList
 			? JSON.parse(JsonProjectList)
@@ -23,8 +34,8 @@ const RootComponent = {
 	},
 }
 
-
 const app = Vue.createApp(RootComponent);
 const vm = app.mount('#app');
 
 console.log(vm.projectList)
+
