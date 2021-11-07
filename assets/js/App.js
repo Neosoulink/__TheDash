@@ -13,7 +13,7 @@ const RootComponent = {
 				{ icon: "help_outline", label: "Infos", id: 4 },
 				{ icon: "settings", label: "Settings", id: 5 },
 			],
-			currentModal: null,
+			currentModal: 1,
 			orderByOptions: [],
 		}
 	},
