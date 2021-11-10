@@ -21,6 +21,11 @@
 				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Favoris.view.php") ?>
 			</template>
 
+			<!-- INFOS -->
+			<template v-if="currentView === 4">
+				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Infos.view.php") ?>
+			</template>
+
 			<!-- SETTINGS -->
 			<template v-if="currentView === 5">
 				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Settings.view.php") ?>
