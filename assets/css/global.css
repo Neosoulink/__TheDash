@@ -558,6 +558,36 @@ a {
 	height: 20px;
 }
 
+#app .option-item {
+	border-bottom: 1px solid #00000020;
+	padding: 20px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+#app .option-item:hover {
+	background-color: #00000005;
+}
+
+#app .option-item.disabled {
+	pointer-events: none;
+	opacity: 0.4;
+	cursor: default;
+	background-color: transparent !important;
+}
+
+#app .option-control {
+	position: relative;
+}
+
+#app .option-control {
+	user-select: none;
+	position: relative;
+}
+
 #app>#main>footer {
 	display: flex;
 	flex-direction: row;
