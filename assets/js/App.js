@@ -48,10 +48,17 @@ const RootComponent = {
 		}
 	},
 	mounted() {
+		// INIT DATA
 		this.projectList = JsonProjectList ? JSON.parse(JsonProjectList) : [];
 		this.favoritesProjects = favoritesJsonProjects
 			? JSON.parse(favoritesJsonProjects)
 			: [];
+
+		// INIT ROUTE
+		const urlAnchor = document.URL.split('#')[1];
+		if (urlAnchor && urlAnchor.length > 0) this.sidebarMenuList.forEach(item => {
+			if (item.label.replace(' ', '_') === urlAnchor) this.currentModal = item.id;
+		});
 	},
 }
 
