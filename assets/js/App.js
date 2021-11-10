@@ -44,6 +44,9 @@ const RootComponent = {
 			return this.projectList.filter(item => {
 				return new RegExp(this.searchInp, 'ig').test(item.name)
 			});
+		},
+		favorisProjectListFiltered() {
+			return this.projectListFiltered.filter(i => this.favoritesProjects.includes(i.name));
 		}
 	},
 	mounted() {
