@@ -192,6 +192,10 @@ a {
 	border-radius: 50%;
 }
 
+.btn-circle-icon.favorite>.icon {
+	color: var(--danger-color)
+}
+
 .btn-circle-icon>.icon {
 	font-size: calc(var(--default-control-height) / 2);
 	height: calc(var(--default-control-height) / 2);
