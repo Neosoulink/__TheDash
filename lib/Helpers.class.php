@@ -194,10 +194,10 @@ class Helpers
 			$factor = floor((strlen(filesize($dir)) - 1) / 3);
 			$dir_infos["size"] = sprintf("%.2f", filesize($dir) / pow(1024, $factor)) . @$sz[$factor];
 			$dir_infos["type"] = filetype($dir);
-			$dir_infos["last_access_time"] = fileatime($dir);
-			$dir_infos["inode_change_time"] = filectime($dir);
+			$dir_infos["last_access_time"] = date("d/m/Y H:i:s", fileatime($dir));
+			$dir_infos["inode_change_time"] = date("d/m/Y H:i:s", filectime($dir));
+			$dir_infos["modification_time"] = date("d/m/Y H:i:s", filemtime($dir));
 			$dir_infos["group"] = filegroup($dir);
-			$dir_infos["modification_time"] = filemtime($dir);
 			$dir_infos["owner"] = fileowner($dir);
 			$dir_infos["permissions"] = fileperms($dir);
 			$dir_infos["file_exists"] = file_exists($dir);

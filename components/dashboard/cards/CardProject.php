@@ -10,8 +10,8 @@
 				<li>Permissions : {{ item?.permissions }}</li>
 			</ul>
 			<ul>
-				<li>Last access: {{ new Date(item?.last_access_time).toString().substr(0, 16) }}</li>
-				<li>Updated at: {{ new Date(item?.modification_time).toString().substr(0, 16) }}</li>
+				<li>Created at: {{ item?.inode_change_time }}</li>
+				<li>Updated at: {{ item?.modification_time }}</li>
 			</ul>
 		</div>
 		<div class="footer">
