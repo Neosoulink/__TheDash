@@ -1,10 +1,12 @@
 const JsonProjectList = window.document.getElementById("JsonProjectList").value;
+const favoritesJsonProjects = localStorage.getItem("JsonProjectList");
 window.document.getElementById("JsonProjectList").remove();
 
 const RootComponent = {
 	data() {
 		return {
 			projectList: [],
+			favoritesProjects: [],
 			searchInp: "",
 			sidebarMenuList: [
 				{ icon: "format_list_bulleted", label: "Project list", id: 1 },
@@ -28,8 +30,9 @@ const RootComponent = {
 		}
 	},
 	mounted() {
-		this.projectList = JsonProjectList
-			? JSON.parse(JsonProjectList)
+		this.projectList = JsonProjectList ? JSON.parse(JsonProjectList) : [];
+		this.favoritesProjects = favoritesJsonProjects
+			? JSON.parse(favoritesJsonProjects)
 			: [];
 	},
 }
