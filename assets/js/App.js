@@ -1,17 +1,13 @@
 const JsonProjectList = document.getElementById("JsonProjectList").value;
 const favoritesJsonProjects = localStorage.getItem("favoritesProjects");
+const optionsJsonProjects = localStorage.getItem("optionItems");
 document.getElementById("JsonProjectList").remove();
 
 const RootComponent = {
 	data() {
 		return {
 			projectList: [],
-			optionItems : {
-				enableVirtualHost: false,
-				domainVirtualHost: 'test',
-				openWithBlank: true,
-				enableLaravelSupport: true,
-			},
+			optionItems: {},
 			favoritesProjects: [],
 			searchInp: "",
 			sidebarMenuList: [
@@ -26,6 +22,9 @@ const RootComponent = {
 		}
 	},
 	methods: {
+		setLocalOptions: function () {
+			localStorage.setItem('optionItems', JSON.stringify(this.optionItems));
+		},
 		addFavorite: function (project = String) {
 			let favoritesProjects = JSON.parse(JSON.stringify(this.favoritesProjects));
 			favoritesProjects.unshift(project);
@@ -71,6 +70,16 @@ const RootComponent = {
 
 		setUrlAnchor(document.URL.split('#')[1]);
 		window.addEventListener('hashchange', () => setUrlAnchor(document.URL.split('#')[1]));
+
+		// OPTIONS SETTING
+		this.optionItems = optionsJsonProjects
+			? JSON.parse(optionsJsonProjects)
+			: {
+				enableVirtualHost: false,
+				domainVirtualHost: 'test',
+				openWithBlank: true,
+				enableLaravelSupport: true,
+			};
 	},
 }
 
