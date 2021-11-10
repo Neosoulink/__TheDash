@@ -18,7 +18,7 @@ const RootComponent = {
 		}
 	},
 	methods: {
-
+		alert(msg) { window.alert(msg); }
 	},
 	computed: {
 		projectListFiltered() {
