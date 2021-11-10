@@ -1,6 +1,6 @@
-const JsonProjectList = window.document.getElementById("JsonProjectList").value;
+const JsonProjectList = document.getElementById("JsonProjectList").value;
 const favoritesJsonProjects = localStorage.getItem("JsonProjectList");
-window.document.getElementById("JsonProjectList").remove();
+document.getElementById("JsonProjectList").remove();
 
 const RootComponent = {
 	data() {
@@ -20,7 +20,7 @@ const RootComponent = {
 		}
 	},
 	methods: {
-		alert(msg) { window.alert(msg); }
+		alert(msg) { alert(msg); }
 	},
 	computed: {
 		projectListFiltered() {
