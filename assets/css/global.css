@@ -63,6 +63,14 @@ a {
 	color: var(--accent-color);
 }
 
+.text-warn {
+	color: var(--warn-color);
+}
+
+.text-muted {
+	color: var(--gray-color);
+}
+
 .text-semi-bold {
 	font-weight: 600 !important;
 }
