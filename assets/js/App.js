@@ -6,6 +6,12 @@ const RootComponent = {
 	data() {
 		return {
 			projectList: [],
+			optionItems : {
+				enableVirtualHost: false,
+				domainVirtualHost: null,
+				openWithBlank: true,
+				enableLaravelSupport: true,
+			},
 			favoritesProjects: [],
 			searchInp: "",
 			sidebarMenuList: [

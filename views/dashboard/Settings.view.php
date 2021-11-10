@@ -5,42 +5,47 @@
 
 <div class="cards-projects-container">
 
-	<template v-for="(item, index) in optionList" :key="index">
-		<?php require(Helpers::getRelativeRootPath() . '/components/dashboard/OptionItem.php') ?>
-	</template>
-
-	<div class="option-item">
+	<div class="option-item" @click="optionItems.enableVirtualHost = !optionItems.enableVirtualHost">
 		<div>
 			<h3 class="option-title">Active virtual host</h3>
 			<p class="option-detail">Sometime you can specify that you've an virtual host</p>
 		</div>
 
 		<div class="option-control">
-			<input type="checkbox" />
-			<span class="checkmark"></span>
+			<input type="checkbox" v-model="optionItems.enableVirtualHost" />
 		</div>
 	</div>
 
-	<div class="option-item disabled">
+	<div class="option-item" :class="{disabled: !optionItems.enableVirtualHost}">
 		<div>
 			<h3 class="option-title">Virtual host domain</h3>
 			<p class="option-detail">Update your local domain. (e.g: myProject.test)</p>
 		</div>
 
 		<div class="option-control">
-			<input type="text" value="test" class="input" style="background-color: white;border: 1px solid #00000050;" />
+			<input type="text" value="test" class="input" style="background-color: white;border: 1px solid #00000050;" v-model="!optionItems.domainVirtualHost" />
 		</div>
 	</div>
 
 	<div class="option-item">
 		<div>
-			<h3 class="option-title">Active virtual host</h3>
-			<p class="option-detail">Sometime you can specify that you've an virtual host</p>
+			<h3 class="option-title">Blank page</h3>
+			<p class="option-detail">Automatically open new view on open project</p>
 		</div>
 
 		<div class="option-control">
-			<input type="checkbox" />
-			<span class="checkmark"></span>
+			<input type="checkbox" v-model="optionItems.openWithBlank" />
+		</div>
+	</div>
+
+	<div class="option-item">
+		<div>
+			<h3 class="option-title">Laravel public support</h3>
+			<p class="option-detail">Automatically redirect to public repo for laravel projects</p>
+		</div>
+
+		<div class="option-control">
+			<input type="checkbox" v-model="optionItems.enableLaravelSupport" />
 		</div>
 	</div>
 
