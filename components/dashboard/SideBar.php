@@ -4,7 +4,7 @@
 		</div>
 
 		<ul class="nav-container">
-			<a :href="'#' + item.label.replace(' ', '_')" class="list-item" v-for="(item, index) in sidebarMenuList" :key="index" :class="((!currentModal || currentModal === null) && index === 0) || (currentModal === item?.id) ? 'selected' : ''" @click="currentModal = item?.id">
+			<a :href="'#' + item.label.replace(' ', '_')" class="list-item" v-for="(item, index) in sidebarMenuList" :key="index" :class="((!currentView || currentView === null) && index === 0) || (currentView === item?.id) ? 'selected' : ''" @click="currentView = item?.id">
 				<span class="material-icons icon">{{ item?.icon }}</span>
 				<span class="list-item-label selected">{{ item?.label }}</span>
 			</a>
