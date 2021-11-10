@@ -25,7 +25,9 @@
 
 				<a href="#" target="blank_" class="btn btn-light btn-circle-icon" @click.prevent="alert('Available soon')"><span class="text-accent material-icons icon">edit</span></a>
 
-				<a href="#" target="blank_" class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">favorite_border</span></a>
+				<a href="#" target="blank_" class="btn btn-light btn-circle-icon" :class="{textDanger : isFavorite(item?.name)}" @click="!isFavorite(item?.name) ? addFavorite(item?.name) : removeFavorite(item?.name)">
+					<span class="text-accent material-icons icon">favorite_border</span>
+				</a>
 			</div>
 		</div>
 	</div>

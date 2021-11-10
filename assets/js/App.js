@@ -20,21 +20,21 @@ const RootComponent = {
 		}
 	},
 	methods: {
-		addFavorite: (project = String) => {
+		addFavorite: function (project = String) {
 			let favoritesProjects = JSON.parse(JSON.stringify(this.favoritesProjects));
 			favoritesProjects.unshift(project);
 
 			this.favoritesProjects = favoritesProjects;
 			localStorage.setItem("favoritesProjects", JSON.stringify(favoritesProjects));
 		},
-		removeFavorite: (project = String) => {
+		removeFavorite: function (project = String) {
 			let favoritesProjects = JSON.parse(JSON.stringify(this.favoritesProjects));
 			favoritesProjects = favoritesProjects.filter(item => item != project);
 
 			this.favoritesProjects = favoritesProjects;
 			localStorage.setItem("favoritesProjects", JSON.stringify(favoritesProjects));
 		},
-		isFavorite: (project) => this.favoritesProjects.includes(project),
+		isFavorite: function (project = String) { return this.favoritesProjects.includes(project) },
 		alert: (msg) => alert(msg)
 	},
 	computed: {
