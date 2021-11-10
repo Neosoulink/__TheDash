@@ -27,6 +27,13 @@ const RootComponent = {
 			this.favoritesProjects = favoritesProjects;
 			localStorage.setItem("favoritesProjects", JSON.stringify(favoritesProjects));
 		},
+		removeFavoris: (project = String) => {
+			let favoritesProjects = JSON.parse(JSON.stringify(this.favoritesProjects));
+			favoritesProjects = favoritesProjects.filter(item => item != project);
+
+			this.favoritesProjects = favoritesProjects;
+			localStorage.setItem("favoritesProjects", JSON.stringify(favoritesProjects));
+		},
 		alert: (msg) => alert(msg)
 	},
 	computed: {
