@@ -8,7 +8,7 @@ const RootComponent = {
 			projectList: [],
 			optionItems : {
 				enableVirtualHost: false,
-				domainVirtualHost: null,
+				domainVirtualHost: 'test',
 				openWithBlank: true,
 				enableLaravelSupport: true,
 			},
