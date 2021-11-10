@@ -1,5 +1,5 @@
 <div class="header-title-container">
-	<h2>Settings</h2>
+	<h2>Infos</h2>
 
 </div>
 
