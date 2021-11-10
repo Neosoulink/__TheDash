@@ -13,12 +13,17 @@
 		<main>
 			<!-- PROJECT LIST (HOME) -->
 			<template v-if="currentView === 1">
-				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/projectList.php") ?>
+				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/ProjectList.view.php") ?>
 			</template>
 
 			<!-- FAVORITES -->
 			<template v-if="currentView === 2">
-				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Favoris.php") ?>
+				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Favoris.view.php") ?>
+			</template>
+
+			<!-- SETTINGS -->
+			<template v-if="currentView === 5">
+				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Settings.view.php") ?>
 			</template>
 		</main>
 
