@@ -438,7 +438,7 @@ a {
 	color: var(--default-color);
 }
 
-#app>#main>main .cards-projects-container .card-project {
+#app .card-project {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -456,7 +456,7 @@ a {
 	margin-bottom: 30px;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-img {
+#app .card-project>.card-img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -467,11 +467,11 @@ a {
 	align-self: stretch;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-img>img {
+#app .card-project>.card-img>img {
 	width: 60%;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body {
+#app .card-project>.card-body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -483,11 +483,11 @@ a {
 	color: var(--gray-color);
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.title {
+#app .card-project>.card-body>.title {
 	color: var(--default-color);
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.content {
+#app .card-project>.card-body>.content {
 	flex: 1;
 	display: flex;
 	flex-direction: row;
@@ -499,18 +499,18 @@ a {
 	margin: 10px 0;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.content>* {
+#app .card-project>.card-body>.content>* {
 	flex: 1;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.content>*>* {
+#app .card-project>.card-body>.content>*>* {
 	margin-bottom: 5px;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer {
+#app .card-project>.card-body>.footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -520,7 +520,7 @@ a {
 	margin: 0;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer>* {
+#app .card-project>.card-body>.footer>* {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -531,22 +531,22 @@ a {
 	padding: 0;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*:last-child {
+#app .card-project>.card-body>.footer>*:last-child {
 	justify-content: flex-end !important;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*>* {
+#app .card-project>.card-body>.footer>*>* {
 	margin: 0;
 	margin-right: 10px;
 	padding: 0;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer>*:last-child>* {
+#app .card-project>.card-body>.footer>*:last-child>* {
 	margin-right: 0;
 	margin-left: 10px;
 }
 
-#app>#main>main .cards-projects-container .card-project>.card-body>.footer .img-icon {
+#app .card-project>.card-body>.footer .img-icon {
 	height: 20px;
 }
 
