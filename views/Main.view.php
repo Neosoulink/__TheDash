@@ -13,12 +13,12 @@
 		<main>
 			<!-- PROJECT LIST (HOME) -->
 			<template v-if="currentView === 1">
-				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/projectList.php") ?>
+				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/projectList.php") ?>
 			</template>
 
 			<!-- FAVORITES -->
 			<template v-if="currentView === 2">
-				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/Favoris.php") ?>
+				<?php require(Helpers::getRelativeRootPath() . "/views/dashboard/Favoris.php") ?>
 			</template>
 		</main>
 
