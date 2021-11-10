@@ -1,6 +1,6 @@
 const JsonProjectList = document.getElementById("JsonProjectList").value;
 const favoritesJsonProjects = localStorage.getItem("favoritesProjects");
-const optionsJsonProjects = localStorage.getItem("optionItems");
+const optionsSettingsJson = localStorage.getItem("optionItems");
 document.getElementById("JsonProjectList").remove();
 
 const RootComponent = {
@@ -72,8 +72,8 @@ const RootComponent = {
 		window.addEventListener('hashchange', () => setUrlAnchor(document.URL.split('#')[1]));
 
 		// OPTIONS SETTING
-		this.optionItems = optionsJsonProjects
-			? JSON.parse(optionsJsonProjects)
+		this.optionItems = optionsSettingsJson
+			? JSON.parse(optionsSettingsJson)
 			: {
 				enableVirtualHost: false,
 				domainVirtualHost: 'test',
