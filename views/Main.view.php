@@ -12,12 +12,12 @@
 		<!-- MAIN ROUTE VIEWS -->
 		<main>
 			<!-- PROJECT LIST (HOME) -->
-			<template v-if="currentModal === 1">
+			<template v-if="currentView === 1">
 				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/projectList.php") ?>
 			</template>
 
 			<!-- FAVORITES -->
-			<template v-if="currentModal === 2">
+			<template v-if="currentView === 2">
 				<?php require(Helpers::getRelativeRootPath() . "/components/dashboard/routeViews/Favoris.php") ?>
 			</template>
 		</main>

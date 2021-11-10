@@ -15,7 +15,7 @@ const RootComponent = {
 				{ icon: "help_outline", label: "Infos", id: 4 },
 				{ icon: "settings", label: "Settings", id: 5 },
 			],
-			currentModal: 1,
+			currentView: 1,
 			orderByOptions: [],
 		}
 	},
@@ -57,7 +57,7 @@ const RootComponent = {
 		// INIT ROUTE
 		const urlAnchor = document.URL.split('#')[1];
 		if (urlAnchor && urlAnchor.length > 0) this.sidebarMenuList.forEach(item => {
-			if (item.label.replace(' ', '_') === urlAnchor) this.currentModal = item.id;
+			if (item.label.replace(' ', '_') === urlAnchor) this.currentView = item.id;
 		});
 	},
 }
