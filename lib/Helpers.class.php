@@ -190,7 +190,9 @@ class Helpers
 		$dir_infos = [];
 
 		if (file_exists($dir)) {
-			$dir_infos["size"] = filesize($dir);
+			$sz = 'BKMGTP';
+			$factor = floor((strlen(filesize($dir)) - 1) / 3);
+			$dir_infos["size"] = sprintf("%.2f", filesize($dir) / pow(1024, $factor)) . @$sz[$factor];
 			$dir_infos["type"] = filetype($dir);
 			$dir_infos["last_access_time"] = fileatime($dir);
 			$dir_infos["inode_change_time"] = filectime($dir);

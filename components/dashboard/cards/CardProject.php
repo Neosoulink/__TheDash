@@ -6,7 +6,7 @@
 		<h4 class="title">{{ item?.name }}</h4>
 		<div class="content">
 			<ul>
-				<li>Size : {{ item?.size }}kb</li>
+				<li>Size : {{ item?.size }}</li>
 				<li>Permissions : {{ item?.permissions }}</li>
 			</ul>
 			<ul>
