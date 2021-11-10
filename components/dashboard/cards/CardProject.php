@@ -7,7 +7,7 @@
 		<div class="content">
 			<ul>
 				<li>Size : {{ item?.size }}</li>
-				<li>Permissions : {{ item?.permissions }}</li>
+				<li>Permissions : {{ item?.stat?.mode }}</li>
 			</ul>
 			<ul>
 				<li>Created at: {{ item?.inode_change_time }}</li>

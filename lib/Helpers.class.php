@@ -197,10 +197,8 @@ class Helpers
 			$dir_infos["last_access_time"] = date("d/m/Y H:i:s", fileatime($dir));
 			$dir_infos["inode_change_time"] = date("d/m/Y H:i:s", filectime($dir));
 			$dir_infos["modification_time"] = date("d/m/Y H:i:s", filemtime($dir));
-			$dir_infos["group"] = filegroup($dir);
-			$dir_infos["owner"] = fileowner($dir);
-			$dir_infos["permissions"] = fileperms($dir);
 			$dir_infos["file_exists"] = file_exists($dir);
+			$dir_infos["stat"] = stat($dir);
 		} else {
 			throw new Exception("The directory passed aren't valid", 1);
 		}
