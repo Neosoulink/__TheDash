@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="option-control">
-			<input type="text" value="test" class="input" style="background-color: white;border: 1px solid #00000050;" v-model="!optionItems.domainVirtualHost" />
+			<input type="text" value="test" class="input" style="background-color: white;border: 1px solid #00000050;" v-model="optionItems.domainVirtualHost" />
 		</div>
 	</div>
 
