@@ -1,1 +1,4 @@
-<h3 class="card-title">Favoris</h3>
+<div class="header-title-container">
+	<h2>Favoris</h2>
+
+</div>
