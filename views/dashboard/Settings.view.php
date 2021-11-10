@@ -27,25 +27,31 @@
 		</div>
 	</div>
 
-	<div class="option-item" @click="optionItems.openWithBlank = !optionItems.openWithBlank">
+	<div class="option-item" @click="() => {
+		optionItems.openWithBlank = !optionItems.openWithBlank;
+		setLocalOptions();
+	}">
 		<div>
 			<h3 class="option-title">Blank page</h3>
 			<p class="option-detail">Automatically open new view on open project</p>
 		</div>
 
 		<div class="option-control">
-			<input type="checkbox" v-model="optionItems.openWithBlank" />
+			<input type="checkbox" v-model="optionItems.openWithBlank" @change="setLocalOptions" />
 		</div>
 	</div>
 
-	<div class="option-item" @click="optionItems.enableLaravelSupport = !optionItems.enableLaravelSupport">
+	<div class="option-item" @click="() => {
+		optionItems.enableLaravelSupport = !optionItems.enableLaravelSupport;
+		setLocalOptions();
+	}">
 		<div>
 			<h3 class="option-title">Laravel public support</h3>
 			<p class="option-detail">Automatically redirect to public repo for laravel projects</p>
 		</div>
 
 		<div class="option-control">
-			<input type="checkbox" v-model="optionItems.enableLaravelSupport" />
+			<input type="checkbox" v-model="optionItems.enableLaravelSupport" @change="setLocalOptions" />
 		</div>
 	</div>
 
