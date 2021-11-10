@@ -1,5 +1,5 @@
 const JsonProjectList = document.getElementById("JsonProjectList").value;
-const favoritesJsonProjects = localStorage.getItem("JsonProjectList");
+const favoritesJsonProjects = localStorage.getItem("favoritesProjects");
 document.getElementById("JsonProjectList").remove();
 
 const RootComponent = {
@@ -20,7 +20,14 @@ const RootComponent = {
 		}
 	},
 	methods: {
-		alert(msg) { alert(msg); }
+		addFavoris: (project = String) => {
+			let favoritesProjects = JSON.parse(JSON.stringify(this.favoritesProjects));
+			favoritesProjects.unshift(project);
+
+			this.favoritesProjects = favoritesProjects;
+			localStorage.setItem("favoritesProjects", JSON.stringify(favoritesProjects));
+		},
+		alert: (msg) => alert(msg)
 	},
 	computed: {
 		projectListFiltered() {
