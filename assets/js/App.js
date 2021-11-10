@@ -24,8 +24,6 @@ const RootComponent = {
 			let favoritesProjects = JSON.parse(JSON.stringify(this.favoritesProjects));
 			favoritesProjects.unshift(project);
 
-			console.log(favoritesProjects);
-
 			this.favoritesProjects = favoritesProjects;
 			localStorage.setItem("favoritesProjects", JSON.stringify(favoritesProjects));
 		},
