@@ -27,7 +27,7 @@
 		</div>
 	</div>
 
-	<div class="option-item">
+	<div class="option-item" @click="optionItems.openWithBlank = !optionItems.openWithBlank">
 		<div>
 			<h3 class="option-title">Blank page</h3>
 			<p class="option-detail">Automatically open new view on open project</p>
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 
-	<div class="option-item">
+	<div class="option-item" @click="optionItems.enableLaravelSupport = !optionItems.enableLaravelSupport">
 		<div>
 			<h3 class="option-title">Laravel public support</h3>
 			<p class="option-detail">Automatically redirect to public repo for laravel projects</p>
