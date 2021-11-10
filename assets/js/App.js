@@ -55,10 +55,16 @@ const RootComponent = {
 			: [];
 
 		// INIT ROUTE
-		const urlAnchor = document.URL.split('#')[1];
-		if (urlAnchor && urlAnchor.length > 0) this.sidebarMenuList.forEach(item => {
-			if (item.label.replace(' ', '_') === urlAnchor) this.currentView = item.id;
-		});
+		const sidebarMenuList = this.sidebarMenuList;
+		const setCurrentView = (id) => this.currentView = id;
+		const setUrlAnchor = (urlAnchor = document.URL.split('#')[1]) => {
+			if (urlAnchor && urlAnchor.length > 0) sidebarMenuList.forEach(item => {
+				if (item.label.replace(' ', '_') === urlAnchor) setCurrentView(item.id);
+			});
+		};
+
+		setUrlAnchor(document.URL.split('#')[1]);
+		window.addEventListener('hashchange', () => setUrlAnchor(document.URL.split('#')[1]));
 	},
 }
 
