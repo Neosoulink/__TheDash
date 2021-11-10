@@ -11,5 +11,7 @@
 </div>
 
 <div class="cards-projects-container">
-	<?php require(Helpers::getRelativeRootPath().'/components/dashboard/cards/CardProject.php') ?>
+	<div v-for="(item, index) in projectListFiltered" :key="index">
+		<?php require(Helpers::getRelativeRootPath() . '/components/dashboard/cards/CardProject.php') ?>
+	</div>
 </div>

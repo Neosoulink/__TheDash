@@ -1,4 +1,4 @@
-<div v-for="(item, index) in projectListFiltered" :key="index" class="card-project">
+<div class="card-project">
 	<div class="card-img">
 		<img src="<?= Helpers::getAssetsPath() ?>/img/computer-programming.png" />
 	</div>
