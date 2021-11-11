@@ -1,7 +1,7 @@
 <div class="card-project">
-	<div class="card-img">
+	<a :href="formatProjectLink(item)" :target="optionItems.openWithBlank ? 'blank_' : '' " class="card-img">
 		<img src="<?= Helpers::getAssetsPath() ?>/img/computer-programming.png" />
-	</div>
+	</a>
 	<div class="card-body">
 		<h4 class="title">{{ item?.name }}</h4>
 		<div class="content">
@@ -21,15 +21,7 @@
 				</li>
 			</ul>
 			<div>
-				<a :href="(optionItems.enableVirtualHost && optionItems.domainVirtualHost != '')
-					? 'http://' + item?.name + '.' + optionItems.domainVirtualHost
-					: item?.project_url + ((
-						item?.builded_lang?.toLowerCase() === 'laravel'
-						&& optionItems.laravelPublicDirSupport
-					)
-						? '/public'
-						: ''
-				)" :target="optionItems.openWithBlank ? 'blank_' : '' " class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">visibility</span></a>
+				<a :href="formatProjectLink(item)" :target="optionItems.openWithBlank ? 'blank_' : '' " class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">visibility</span></a>
 
 				<!-- TODO: Add edit feature -->
 				<!--<a href="#" target="blank_" class="btn btn-light btn-circle-icon" @click.prevent="alert('Available soon')"><span class="text-accent material-icons icon">edit</span></a>-->

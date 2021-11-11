@@ -22,6 +22,19 @@ const RootComponent = {
 		}
 	},
 	methods: {
+		formatProjectLink: function (project = Object) {
+			return (
+				this.optionItems.enableVirtualHost &&
+				this.optionItems.domainVirtualHost != ''
+			) ? 'http://' + project?.name + '.' + this.optionItems.domainVirtualHost
+				: project?.project_url + ((
+					project?.builded_lang?.toLowerCase() === 'laravel'
+					&& this.optionItems.laravelPublicDirSupport
+				)
+					? '/public'
+					: ''
+				)
+		},
 		setLocalOptions: function () {
 			localStorage.setItem('optionItems', JSON.stringify(this.optionItems));
 		},
