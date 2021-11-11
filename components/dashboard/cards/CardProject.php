@@ -21,7 +21,7 @@
 				</li>
 			</ul>
 			<div>
-				<a :href="optionItems.enableVirtualHost && optionItems.domainVirtualHost = ''
+				<a :href="(optionItems.enableVirtualHost && optionItems.domainVirtualHost != '')
 					? 'http://' + item?.name + '.' + optionItems.domainVirtualHost
 					: item?.project_url + ((
 						item?.builded_lang?.toLowerCase() === 'laravel'
