@@ -11,10 +11,9 @@
 		</ul>
 
 		<div class="gift-card-container">
-			<a href="#" title="Support the creator" class="gift-card">
-				<span class="material-icons">redeem</span>
-				<h2>Gift</h2>
-				<p>Follow the instructions to embed the icon font in your</p>
+			<a href="https://www.paypal.com/donate/?hosted_button_id=C4GZG2BAF3LMY" title="Support the creator" target="_blank" class="gift-card">
+				<span class="material-icons">volunteer_activism</span>
+				<p>If you like this project and want support me and my job, you can make a donation <span class="material-icons text-danger" style="font-size: inherit;">favorite<span></p>
 			</a>
 		</div>
 	</section>
