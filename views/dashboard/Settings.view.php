@@ -22,11 +22,12 @@
 	<div class="option-item" :class="{disabled: !optionItems.enableVirtualHost}">
 		<div>
 			<h3 class="option-title">Virtual host domain</h3>
-			<p class="option-detail">Update your local domain. (Must enabled virtual host. e.g: myProject.test).</p>
+			<p class="option-detail">Update your local domain. (Virtual host must be enabled. e.g: myProject.test).</p>
 		</div>
 
 		<div class="option-control">
 			<input type="text" value="test" class="input" style="background-color: white;border: 1px solid #00000050;" v-model="optionItems.domainVirtualHost" @change="setLocalOptions" />
+			<small class="text-danger" v-if="optionItems.enableVirtualHost && (!optionItems.domainVirtualHost || optionItems.domainVirtualHost == '')">Must not be empty</small>
 		</div>
 	</div>
 
