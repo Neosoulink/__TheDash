@@ -50,7 +50,7 @@
 	}">
 		<div>
 			<h3 class="option-title">Laravel public support</h3>
-			<p class="option-detail">Automatically redirect to public repo for laravel projects</p>
+			<p class="option-detail">Automatically redirect to public directory for laravel projects</p>
 		</div>
 
 		<div class="option-control">
