@@ -476,7 +476,7 @@ a {
 }
 
 #app .card-project>.card-img>img {
-	width: 60%;
+	width: 100px;
 }
 
 #app .card-project>.card-body {
