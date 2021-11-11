@@ -11,7 +11,7 @@
 	}">
 		<div>
 			<h3 class="option-title">Active virtual host</h3>
-			<p class="option-detail">Sometime you can specify that you've an virtual host</p>
+			<p class="option-detail">You can specify that you are using a virtual host</p>
 		</div>
 
 		<div class="option-control">
@@ -36,7 +36,7 @@
 	}">
 		<div>
 			<h3 class="option-title">Blank page</h3>
-			<p class="option-detail">Automatically open new view on open project</p>
+			<p class="option-detail">Automatically open a new view on open project</p>
 		</div>
 
 		<div class="option-control">
