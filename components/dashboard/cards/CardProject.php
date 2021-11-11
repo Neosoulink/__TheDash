@@ -21,7 +21,7 @@
 				</li>
 			</ul>
 			<div>
-				<a :href="optionItems.enableVirtualHost ? 'http://' + item?.name + '.' + optionItems.domainVirtualHost : item?.project_url" :target="optionItems.openWithBlank ? 'blank_' : ''" class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">visibility</span></a>
+				<a :href="optionItems.enableVirtualHost ? 'http://' + item?.name + '.' + optionItems.domainVirtualHost : item?.project_url + ((item?.builded_lang?.toLowerCase() === 'laravel' && optionItems.laravelPublicDirSupport) ? '/public' : '')" :target="optionItems.openWithBlank ? 'blank_' : ''" class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">visibility</span></a>
 
 				<a href="#" target="blank_" class="btn btn-light btn-circle-icon" @click.prevent="alert('Available soon')"><span class="text-accent material-icons icon">edit</span></a>
 
