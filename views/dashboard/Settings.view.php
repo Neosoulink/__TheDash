@@ -11,7 +11,7 @@
 	}">
 		<div>
 			<h3 class="option-title">Active virtual host</h3>
-			<p class="option-detail">You can specify that you are using a virtual host</p>
+			<p class="option-detail">You can specify that you are using a virtual host.</p>
 		</div>
 
 		<div class="option-control">
@@ -22,7 +22,7 @@
 	<div class="option-item" :class="{disabled: !optionItems.enableVirtualHost}">
 		<div>
 			<h3 class="option-title">Virtual host domain</h3>
-			<p class="option-detail">Update your local domain. (e.g: myProject.test)</p>
+			<p class="option-detail">Update your local domain. (Must enabled virtual host. e.g: myProject.test).</p>
 		</div>
 
 		<div class="option-control">
@@ -36,7 +36,7 @@
 	}">
 		<div>
 			<h3 class="option-title">Blank page</h3>
-			<p class="option-detail">Automatically open a new view on open project</p>
+			<p class="option-detail">Automatically open a new view on open project.</p>
 		</div>
 
 		<div class="option-control">
@@ -47,16 +47,15 @@
 	<div class="option-item" @click="() => {
 		optionItems.laravelPublicDirSupport = !optionItems.laravelPublicDirSupport;
 		setLocalOptions();
-	}">
+	}" :class="{disabled: optionItems.enableVirtualHost}">
 		<div>
 			<h3 class="option-title">Laravel public support</h3>
-			<p class="option-detail">Automatically redirect to public directory for laravel projects</p>
+			<p class="option-detail">Automatically redirect to public directory for laravel projects. (Disabled if using a virtual host).</p>
 		</div>
 
 		<div class="option-control">
 			<input type="checkbox" v-model="optionItems.laravelPublicDirSupport" @change="setLocalOptions" />
 		</div>
 	</div>
-
 
 </div>
