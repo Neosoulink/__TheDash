@@ -78,7 +78,7 @@ const RootComponent = {
 				enableVirtualHost: false,
 				domainVirtualHost: 'test',
 				openWithBlank: true,
-				enableLaravelSupport: true,
+				laravelPublicDirSupport: true,
 			};
 	},
 }

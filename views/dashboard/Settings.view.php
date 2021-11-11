@@ -45,7 +45,7 @@
 	</div>
 
 	<div class="option-item" @click="() => {
-		optionItems.enableLaravelSupport = !optionItems.enableLaravelSupport;
+		optionItems.laravelPublicDirSupport = !optionItems.laravelPublicDirSupport;
 		setLocalOptions();
 	}">
 		<div>
@@ -54,7 +54,7 @@
 		</div>
 
 		<div class="option-control">
-			<input type="checkbox" v-model="optionItems.enableLaravelSupport" @change="setLocalOptions" />
+			<input type="checkbox" v-model="optionItems.laravelPublicDirSupport" @change="setLocalOptions" />
 		</div>
 	</div>
 
