@@ -10,8 +10,8 @@
 				<li>Permissions : {{ item?.stat?.mode }}</li>
 			</ul>
 			<ul>
-				<li>Created at: {{ item?.inode_change_time }}</li>
-				<li>Updated at: {{ item?.modification_time }}</li>
+				<li>Created at : {{ item?.inode_change_time }}</li>
+				<li>Updated at : {{ item?.modification_time }}</li>
 			</ul>
 		</div>
 		<div class="footer">
