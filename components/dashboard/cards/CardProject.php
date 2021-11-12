@@ -17,7 +17,7 @@
 		<div class="footer">
 			<ul>
 				<li>
-					<img class="img-icon" v-if="item?.builded_lang != 'Unknown'" :src="`<?= Helpers::getAssetsPath() ?>/svg/builded_env/${item?.framework?.toLowerCase()}.svg`" />
+					<img class="img-icon" v-if="item?.framework != 'Unknown'" :src="`<?= Helpers::getAssetsPath() ?>/svg/builded_env/${item?.framework?.toLowerCase()}.svg`" />
 				</li>
 			</ul>
 			<div>
