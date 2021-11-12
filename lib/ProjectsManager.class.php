@@ -28,7 +28,7 @@ class ProjectsManager
 			) {
 				$project_data = Helpers::get_dir_info($dir . $directory);
 				$project_data["name"] = $directory;
-				$project_data["builded_lang"] = self::get_project_builded_lang($dir . $directory);
+				$project_data["framework"] = self::get_project_builded_framework($dir . $directory);
 				$project_data["project_url"] = ProjectsManager::generate_project_url($directory);
 
 				array_push($projectsList, $project_data);
@@ -52,12 +52,12 @@ class ProjectsManager
 	/**
 	 * @return string
 	 */
-	public static function get_project_builded_lang(string $rootDirectory)
+	public static function get_project_builded_framework(string $rootDirectory)
 	{
 		$dir = './' . $rootDirectory;
 		$directories = scandir($dir);
 
-		$projects_list = [];
+		$file_list = [];
 
 		$project_builded_name = null;
 
@@ -69,17 +69,20 @@ class ProjectsManager
 		$projects_builded = (object) [
 			"LARAVEL" =>  [
 				".env",
-				".env.example",
+				"routes",
+				"storage",
+				"resources",
+				"database",
 			]
 		];
 
 		foreach ($directories as $directory) {
-			array_push($projects_list, $directory);
+			array_push($file_list, $directory);
 		}
 
 		if (
-			(in_array($projects_builded->LARAVEL[0], $projects_list, true) ||
-				in_array($projects_builded->LARAVEL[0], $projects_list, true))
+			(in_array($projects_builded->LARAVEL[0], $file_list, true) ||
+				in_array($projects_builded->LARAVEL[0], $file_list, true))
 		) {
 			$project_builded_name = $projects_builded_names->LARAVEL;
 		}
@@ -88,4 +91,6 @@ class ProjectsManager
 			? $project_builded_name
 			: $projects_builded_names->UNKNOWN;
 	}
+
+
 }
