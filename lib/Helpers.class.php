@@ -185,13 +185,24 @@ class Helpers
 	 * @param  string $directory
 	 * @return integer
 	 */
-	public static function get_dir_size($directory)
+	public static function get_dir_size($path)
 	{
-		$size = 0;
-		foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file) {
-			$size += $file->getSize();
+		$total_size = 0;
+		$files = scandir($path);
+
+		foreach ($files as $t) {
+			if (is_dir(rtrim($path, '/') . '/' . $t)) {
+				if ($t <> "." && $t <> "..") {
+					$size = self::get_dir_size(rtrim($path, '/') . '/' . $t);
+
+					$total_size += $size;
+				}
+			} else {
+				$size = filesize(rtrim($path, '/') . '/' . $t);
+				$total_size += $size;
+			}
 		}
-		return $size;
+		return $total_size;
 	}
 
 	/**
