@@ -101,16 +101,7 @@ class ProjectsManager
 		$files = scandir($path);
 
 		foreach ($files as $t) {
-			if (is_dir(rtrim($path, '/') . '/' . $t)) {
-				if ($t <> "." && $t <> "..") {
-					$size = self::get_dir_size(rtrim($path, '/') . '/' . $t);
-
-					$total_size += $size;
-				}
-			} else {
-				$size = filesize(rtrim($path, '/') . '/' . $t);
-				$total_size += $size;
-			}
+			// TODO: add recursive logic
 		}
 		return $total_size;
 	}
