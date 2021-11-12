@@ -92,5 +92,27 @@ class ProjectsManager
 			: $projects_builded_names->UNKNOWN;
 	}
 
+	/**
+	 * @return string
+	 */
+	public static function get_project_builded_langs(string $path)
+	{
+		$total_size = 0;
+		$files = scandir($path);
+
+		foreach ($files as $t) {
+			if (is_dir(rtrim($path, '/') . '/' . $t)) {
+				if ($t <> "." && $t <> "..") {
+					$size = self::get_dir_size(rtrim($path, '/') . '/' . $t);
+
+					$total_size += $size;
+				}
+			} else {
+				$size = filesize(rtrim($path, '/') . '/' . $t);
+				$total_size += $size;
+			}
+		}
+		return $total_size;
+	}
 
 }
