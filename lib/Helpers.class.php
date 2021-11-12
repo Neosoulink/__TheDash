@@ -185,7 +185,7 @@ class Helpers
 	 * @param  string $directory
 	 * @return integer
 	 */
-	function dirSize($directory)
+	function get_dir_size($directory)
 	{
 		$size = 0;
 		foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file) {
