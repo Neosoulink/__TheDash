@@ -558,6 +558,21 @@ a {
 	height: 20px;
 }
 
+#app .empty-projects-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: calc(100% - 200px);
+	width: 100%;
+}
+
+#app .empty-projects-container > img {
+	width: 170px;
+	opacity: 0.4;
+	margin-bottom: 30px;
+}
+
 #app .option-item {
 	border-bottom: 1px solid #00000020;
 	padding: 20px;
