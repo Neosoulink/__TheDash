@@ -10,7 +10,7 @@
 		setLocalOptions();
 	}">
 		<div>
-			<h3 class="option-title">Active virtual host</h3>
+			<h3 class="option-title">Enable virtual host</h3>
 			<p class="option-detail">You can specify that you are using a virtual host.</p>
 		</div>
 
