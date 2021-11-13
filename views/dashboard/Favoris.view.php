@@ -1,5 +1,5 @@
 <div class="header-title-container">
-	<h2>Favoris list : {{ favorisProjectListFiltered.length }}</h2>
+	<h2>Favortes list : {{ favorisProjectListFiltered.length }}</h2>
 
 </div>
 

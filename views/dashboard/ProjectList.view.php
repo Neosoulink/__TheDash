@@ -1,5 +1,5 @@
 <div class="header-title-container">
-	<h2>Project list : {{ projectListFiltered.length }}</h2>
+	<h2>Projects list : {{ projectListFiltered.length }}</h2>
 
 	<div>
 
