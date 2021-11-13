@@ -506,6 +506,7 @@ a {
 
 #app .card-project>.card-body>.title {
 	color: var(--default-color);
+	font-size: 25px;
 }
 
 #app .card-project>.card-body>.content {
