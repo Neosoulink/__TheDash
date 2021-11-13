@@ -85,6 +85,6 @@ All conventions that we'll use in our codes are in ``.editorconfig`` file. So yo
 
 <br />
 
-<h6>❤ Thank you for going through this little project. If you like the concept, you can leave ⭐ and share it ;)</h6>
+<h6>❤ Thank you for browsing this little project. If you like the concept, you can leave ⭐ and share it ;)</h6>
 
 <h6>_TheDash@2021 V0.0.1. By @Neosoulink</h6>
