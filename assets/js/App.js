@@ -10,6 +10,7 @@ const RootComponent = {
 			optionItems: {},
 			favoritesProjects: [],
 			searchInp: "",
+			searchInpFocused: false,
 			sidebarMenuList: [
 				{ icon: "format_list_bulleted", label: "Project list", id: 1 },
 				{ icon: "favorite_border", label: "Favoris", id: 2 },
