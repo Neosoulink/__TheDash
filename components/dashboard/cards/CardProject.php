@@ -1,5 +1,5 @@
 <div class="card-project">
-	<a :href="formatProjectLink(item)" :target="optionItems.openWithBlank ? 'blank_' : '' " class="card-img">
+	<a @click="searchInp = ''" :href="formatProjectLink(item)" :target="optionItems.openWithBlank ? 'blank_' : '' " class="card-img">
 		<img :src="`<?= Helpers::getAssetsPath() ?>/svg/builded_env/${item?.framework?.toLowerCase()}.svg`" />
 	</a>
 	<!-- /.img -->
@@ -20,7 +20,7 @@
 	<!-- /.card-body -->
 
 	<div class="card-footer">
-		<a :href="formatProjectLink(item)" :target="optionItems.openWithBlank ? 'blank_' : '' " class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">visibility</span></a>
+		<a :href="formatProjectLink(item)" @click="searchInp = ''" :target="optionItems.openWithBlank ? 'blank_' : '' " class="btn btn-light btn-circle-icon"><span class="text-accent material-icons icon">visibility</span></a>
 
 		<!-- TODO: Add edit feature -->
 		<!--<a href="#" target="blank_" class="btn btn-light btn-circle-icon" @click.prevent="alert('Available soon')"><span class="text-accent material-icons icon">edit</span></a>-->
