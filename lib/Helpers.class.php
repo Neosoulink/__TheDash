@@ -163,6 +163,22 @@ class Helpers
 	 *
 	 * @return string
 	 */
+	public static function getServerEnvironment(): string
+	{
+		$apache2handler = self::get_parsed_phpinfo()["apache2handler"];
+
+		if (is_array($apache2handler) && !empty($apache2handler)) {
+			$hostPort = $apache2handler["Hostname:Port"];
+			if (is_string($hostPort) && !empty($hostPort)) return preg_split('/\:/', $hostPort)[0];
+		}
+		return "unknown";
+	}
+
+	/**
+	 * Method that return assets path
+	 *
+	 * @return string
+	 */
 	public static function getAssetsPath(): string
 	{
 		$appName = getenv('APP_NAME');

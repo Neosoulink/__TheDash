@@ -1,7 +1,10 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: bottom;	font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;	scroll-behavior: smooth;	transition: all .3s cubic-bezier(0.38, 0.63, 0.3, 1.15);
+	box-sizing: bottom;
+	font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	scroll-behavior: smooth;
+	transition: all .3s cubic-bezier(0.38, 0.63, 0.3, 1.15);
 }
 
 body,
@@ -101,10 +104,12 @@ a {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: flex-end;	background-color: var(--light-color);
+	justify-content: flex-end;
+	background-color: var(--light-color);
 	border-style: hidden;
 	border-radius: 5px;
-	outline: 1px solid transparent;	width: 200px;
+	outline: 1px solid transparent;
+	width: 200px;
 	height: var(--default-control-height);
 	padding: 0px 10px 0px 20px;
 }
@@ -135,7 +140,8 @@ a {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: stretch;	position: relative;
+	justify-content: stretch;
+	position: relative;
 	height: 40px;
 	padding: 0px 10px 0px 20px;
 }
@@ -157,10 +163,13 @@ a {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;	font-size: var(--default-font-size);
+	justify-content: center;
+	font-size: var(--default-font-size);
 	text-decoration: none;
-	color: var(--default-color);	height: var(--default-control-height);
-	padding: 0 10px;	background-color: var(--light-color);
+	color: var(--default-color);
+	height: var(--default-control-height);
+	padding: 0 10px;
+	background-color: var(--light-color);
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -218,18 +227,23 @@ a {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: flex-start;
-	padding: 0;	height: var(--header-height);	flex: none;
+	padding: 0;
+	height: var(--header-height);
+	flex: none;
 	order: 0;
 	align-self: stretch;
 	flex-grow: 0;
-	margin: 0px 0px;	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+	margin: 0px 0px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 #app>#sidebar-menu>div.logo-container>.text-logo {
 	font-family: "Nunito-extraBold";
 	font-size: 30px;
 	color: var(--default-color);
-	text-decoration: none;	filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.15));	padding: 0;
+	text-decoration: none;
+	filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.15));
+	padding: 0;
 	margin: 0 0 5px 20px;
 }
 
@@ -302,19 +316,23 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;	min-height: 40vh;
+	justify-content: center;
+	min-height: 40vh;
 }
 
 #app>#sidebar-menu .gift-card {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;	position: static;
+	align-items: flex-start;
+	position: static;
 	width: 180px;
 	left: 29px;
-	top: 701px;	opacity: 0.9;
+	top: 701px;
+	opacity: 0.9;
 	background: linear-gradient(131.55deg, var(--default-color) 0%, rgba(5, 5, 7, 0.7) 96.47%);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
-	border-radius: 20px;	/* Inside Auto Layout */
+	border-radius: 20px;
+	/* Inside Auto Layout */
 
 	flex: none;
 	order: 2;
@@ -348,8 +366,10 @@ a {
 #app>#main {
 	display: flex;
 	flex-direction: column;
-	align-items: stretch;	width: calc(100% - var(--left-sidebar-width));
-	height: 100%;	margin-left: var(--left-sidebar-width);
+	align-items: stretch;
+	width: calc(100% - var(--left-sidebar-width));
+	height: 100%;
+	margin-left: var(--left-sidebar-width);
 	overflow: hidden;
 }
 
@@ -357,10 +377,12 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;	position: static;
+	align-items: center;
+	position: static;
 	height: var(--header-height);
 	padding: 0 var(--main-line-margin-x-space);
-	width: 100;	background: #FFFFFF;
+	width: 100;
+	background: #FFFFFF;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -401,7 +423,7 @@ a {
 }
 
 #app>#main>header .card-search>.project-item:hover {
-		box-shadow: var(--default-control-box-shadow);
+	box-shadow: var(--default-control-box-shadow);
 }
 
 #app>#main>header .card-search>.project-item>.title {
@@ -445,11 +467,14 @@ a {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 0px;	min-height: 200px;
+	padding: 0px;
+	min-height: 200px;
 	max-height: 250px;
-	overflow: hidden;	background: white;
+	overflow: hidden;
+	background: white;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-	border-radius: 20px;	margin: 0px;
+	border-radius: 20px;
+	margin: 0px;
 	margin-bottom: 30px;
 }
 
@@ -552,7 +577,8 @@ a {
 
 #app .option-item {
 	border-bottom: 1px solid #00000020;
-	padding: 20px;	display: flex;
+	padding: 20px;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
@@ -585,28 +611,43 @@ a {
 
 #app>#main>footer {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;	height: var(--footer-height);	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));	flex: none;
+	align-items: center;
+	height: var(--footer-height);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	flex: none;
 	order: 1;
 	flex-grow: 0;
 	margin: 0;
 	padding: 0 var(--main-line-margin-x-space);
 }
 
-#app>#main>footer>h3 {
+#app>#main>footer h3 {
 	font-weight: normal;
 	font-size: var(--default-font-size);
+}
+
+#app>#main>footer>.server-about {
+	display: flex;
+	align-items: center;
+}
+
+#app>#main>footer>.server-about img {
+	height: 30px;
+	margin-left: 10px;
 }
 
 #app .modal {
 	display: none;
 	justify-content: center;
-	align-items: center;	position: absolute;
+	align-items: center;
+	position: absolute;
 	top: 0;
-	left: 0;	height: 100%;
+	left: 0;
+	height: 100%;
 	width: 100vw;
-	overflow: hidden;	/*display: none;*/
+	overflow: hidden;
+	/*display: none;*/
 	z-index: 9998;
 }
 
@@ -627,12 +668,16 @@ a {
 }
 
 #app .modal>.card-content {
-	background-color: white;	border-radius: 20px;
-	box-shadow: var(--default-control-box-shadow);	position: relative;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: var(--default-control-box-shadow);
+	position: relative;
 	height: 70vh;
 	width: 100%;
-	overflow: hidden;	padding: 50px 40px 20px 40px;
-	margin: auto 20vw;	z-index: 9999;
+	overflow: hidden;
+	padding: 50px 40px 20px 40px;
+	margin: auto 20vw;
+	z-index: 9999;
 }
 
 #app .modal>.card-content .close-btn {
