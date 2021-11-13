@@ -13,5 +13,5 @@ SessionManager::ss();
 
 (new DotEnv(__DIR__ . '/.env'))->load();
 
-// IMPORTANT: DEFINE A ROOTER !!!
+// TODO: SET UP A ROOTER
 App::launchApp();
