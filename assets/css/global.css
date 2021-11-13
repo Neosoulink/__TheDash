@@ -133,7 +133,7 @@ a {
 	box-shadow: var(--default-control-box-shadow);
 }
 
-.input.extend:focus {
+.input.extend {
 	width: 300px;
 }
 
@@ -421,6 +421,54 @@ a {
 	margin-left: 20px;
 }
 
+#app>#main>header .input-icon-wrapper {
+	position: relative;
+}
+
+#app>#main>header input[type=search]:focus {
+	width: 300px;
+}
+
+#app>#main>header .card-search {
+	position: absolute;
+	top: calc(100% + 20px);
+	right: 10px;
+	width: calc(100% - 50px);
+	max-height: 200px;
+	box-shadow: var(--default-control-box-shadow-light);
+	border-radius: 10px;
+	background-color: white;
+	padding: 0 10px;
+	overflow: hidden scroll;
+}
+
+#app>#main>header .card-search>.project-item {
+	height: var(--default-control-height);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	margin: 10px 0;
+	color: #555;
+	box-shadow: var(--default-control-box-shadow-light);
+}
+
+#app>#main>header .card-search>.project-item:hover {
+		box-shadow: var(--default-control-box-shadow);
+}
+
+#app>#main>header .card-search>.project-item>.title {
+	margin-left: 20px;
+	flex: 1;
+}
+
+#app>#main>header .card-search>.project-item>.icon {
+	font-size: 22px;
+	margin-right: 20px;
+}
+
+
+
 #app>#main>main {
 	padding: 20px var(--main-line-margin-x-space);
 	flex: 1;
@@ -567,7 +615,7 @@ a {
 	width: 100%;
 }
 
-#app .empty-projects-container > img {
+#app .empty-projects-container>img {
 	width: 170px;
 	opacity: 0.4;
 	margin-bottom: 30px;
